@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio | Callejeritos Gonnet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       ORGANISMO: .header (Logo CG + barra de navegación + CTA)
+       ========================================================= -->
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="index.html" class="logo" aria-label="Inicio Callejeritos Gonnet">
+     <img src="assets/Logo.png" alt="Logo Callejeritos Gonnet" class="logo__svg">
+      </a>
+
+      <nav class="barra-navegacion" aria-label="Navegación principal">
+        <ul class="barra-navegacion__lista">
+          <li><a href="quienes-somos.html" class="header_item">¿Quiénes somos?</a></li>
+          <li><a href="adopciones.html" class="header_item">Adopciones</a></li>
+          <li><a href="como-ayudar.html" class="header_item">Cómo ayudar</a></li>
+          <li><a href="agenda.html" class="header_item">Agenda</a></li>
+          <li><a href="contacto.html" class="header_item">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="como-ayudar.html#donar" class="btn-primario">¡Doná ahora!</a>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       CONTENIDO PRINCIPAL (CSS GRID - 4 / 8 / 12 COLUMNAS)
+       ========================================================= -->
+  <main class="layout-principal">
+
+    <!-- BLOQUE 1: HERO PRINCIPAL -->
+    <section class="seccion-grid hero">
+      <div class="hero__texto">
+        <h1>Ellos nos necesitan. Vos podés hacer la diferencia.</h1>
+        <p>Rescatamos, rehabilitamos y encontramos familias para animales abandonados. Con tu ayuda garantizamos sus cuidados diarios.</p>
+        <a href="como-ayudar.html" class="btn-primario">¡Ayudanos!</a>
+      </div>
+
+      <div class="hero__imagen">
+        <figure class="hero__collage">
+          <img
+            src="assets/portada1.png"
+            alt="Perro rescatado esperando un hogar"
+            class="hero__foto-principal"
+          >
+          <img
+            src="assets/portada2.png"
+            alt="Cachorros rescatados en tránsito"
+            class="hero__foto-secundaria"
+          >
+        </figure>
+      </div>
+    </section>
+
+    <!-- BLOQUE 2: ADOPTÁ UN CALLEJERITO Y CAMBIÁ DOS VIDAS -->
+    <section class="seccion-grid adopcion-destacada">
+      <div class="adopcion-destacada__imagen">
+        <img
+          src="assets/inicio3.png"
+          alt="Cachorro en brazos de un voluntario"
+          class="adopcion-destacada__foto"
+        >
+      </div>
+
+      <div class="adopcion-destacada__texto">
+        <h2>Adoptá un callejerito y cambiá dos vidas.</h2>
+        <p>Adoptar es mucho más que sumar una mascota: es regalarles una vida llena de <strong>cuidado, respeto y segundas oportunidades</strong>. Cada uno de nuestros rescatados dejó atrás una historia difícil y hoy espera <strong>encontrar una familia definitiva</strong>.</p>
+        <p>Además, cuando abrís las puertas de tu casa, liberás un espacio en el refugio para que podamos <strong>seguir rescatando y recuperando a otros callejeritos</strong>.</p>
+        <a href="adopciones.html" class="btn-primario">¡Adoptá!</a>
+      </div>
+    </section>
+
+    <!-- BLOQUE 3: AYUDANOS A SEGUIR SALVANDO VIDAS (ILUSTRADO) -->
+    <section class="seccion-ilustrada" aria-labelledby="titulo-salvar-vidas">
+    
+
+        <div class="seccion-ilustrada__contenido">
+          <h2 id="titulo-salvar-vidas">Ayudanos a seguir salvando vidas</h2>
+          <p><strong>Cada colaboración cuenta</strong> para darles un nuevo <br> comienzo a los callejeritos que más lo necesitan. <br> <strong>Tu ayuda es fundamental</strong> para que sigamos <br> dándoles segundas oportunidades. Juntos, podemos demostrar <br> que <strong class="texto-remarcado">el amor lo cambia todo.</strong></p>
+          <a href="como-ayudar.html" class="btn-primario">Colaborá ahora</a>
+        </div>
+      
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       ORGANISMO: .footer (Enlaces importantes + redes sociales)
+       ========================================================= -->
+  <footer class="footer">
+    <div class="footer__contenedor">
+      <nav class="footer__enlaces" aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="contacto.html">Contactanos</a></li>
+          <li><a href="como-ayudar.html">Colaborar</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="agenda.html">Agenda Gonnet</a></li>
+          <li><a href="sistema.html">Sistema de Diseño</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__redes">
+        <p>¡Seguinos en redes sociales!</p>
+        <div class="footer__iconos">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Instagram">IG</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

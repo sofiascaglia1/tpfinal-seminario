@@ -1,0 +1,849 @@
+
+/* =========================================================
+   SISTEMA DE DISEÑO · CALLEJERITOS GONNET
+   Estilos exclusivos de sistema.html
+   Utiliza los tokens definidos en styles.css
+   ========================================================= */
+
+/* ESTRUCTURA GENERAL */
+
+.sistema-pagina {
+  row-gap: var(--espaciado-secciones);
+  padding-bottom: var(--espaciado-hero-vertical);
+}
+
+.sistema-encabezado__bloque,
+.sistema-bloque__cabecera,
+.sistema-texto,
+.sistema-destacados,
+.sistema-grilla-colores,
+.sistema-subseccion,
+.sistema-lista-tokens,
+.sistema-inventario,
+.sistema-grilla-formatos {
+  grid-column: 1 / -1;
+}
+
+.sistema-encabezado__bloque,
+.sistema-bloque {
+  background-color: var(--color-fondo-cards);
+  border: var(--borde-fino) solid var(--color-bordes-card);
+  border-radius: var(--radio-seccion);
+  padding: var(--espaciado-componentes);
+}
+
+.sistema-bloque {
+  row-gap: var(--espaciado-componentes);
+}
+
+.sistema-encabezado__bloque {
+  padding: var(--espaciado-secciones);
+}
+
+.sistema-encabezado__bloque h1 {
+  margin-top: var(--espaciado-parrafos);
+}
+
+.sistema-encabezado__bloque p {
+  max-width: var(--ancho-maximo-lectura);
+}
+
+.sistema-bloque__cabecera {
+  margin-bottom: var(--espaciado-xs);
+}
+
+.sistema-bloque__cabecera h2 {
+  margin-top: var(--espaciado-xs);
+}
+
+.sistema-numero {
+  display: inline-block;
+  color: var(--color-acento);
+  font-size: var(--texto-sm);
+  font-weight: var(--peso-extrabold);
+  letter-spacing: var(--espaciado-letras-sm);
+  margin-bottom: var(--espaciado-xs);
+}
+
+.sistema-subseccion {
+  border-top: var(--borde-fino) solid var(--color-bordes-card);
+  padding-top: var(--espaciado-componentes);
+}
+
+.sistema-subseccion h3 {
+  margin-bottom: var(--espaciado-xs);
+}
+
+
+/* =========================================================
+   01 · SOBRE EL CASO
+   ========================================================= */
+
+.sistema-texto {
+  max-width: var(--ancho-maximo-lectura);
+}
+
+.sistema-texto h3 {
+  margin-bottom: var(--espaciado-parrafos);
+}
+
+.sistema-destacados {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-parrafos);
+}
+
+.sistema-destacado {
+  background-color: var(--color-fondo);
+  border: var(--borde-fino) solid var(--color-bordes-card);
+  border-radius: var(--radio-card);
+  padding: var(--espaciado-paddingcomponentes);
+}
+
+.sistema-destacado > span {
+  display: block;
+  color: var(--color-acento);
+  font-family: var(--fuente-titulos);
+  font-weight: var(--peso-extrabold);
+  font-size: var(--texto-titulocard);
+  margin-bottom: var(--espaciado-xs);
+}
+
+.sistema-destacado h3 {
+  font-size: var(--texto-lg);
+  margin-bottom: var(--espaciado-xs);
+}
+
+
+/* =========================================================
+   02 · ANÁLISIS DE REFERENCIA
+   ========================================================= */
+
+.sistema-referencia-intro {
+  background-color: var(--color-fondo);
+  border-radius: var(--radio-card);
+  padding: var(--espaciado-componentes);
+}
+
+.sistema-enlace {
+  display: inline-block;
+  color: var(--color-acento);
+  font-weight: var(--peso-extrabold);
+  text-decoration: none;
+  margin-top: var(--espaciado-parrafos);
+}
+
+.sistema-enlace:hover {
+  color: var(--color-principal-detalles);
+  text-decoration: underline;
+}
+
+.sistema-referencia {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: var(--espaciado-parrafos);
+  align-items: start;
+  padding: var(--espaciado-componentes);
+  background-color: var(--color-fondo);
+  border-radius: var(--radio-card);
+}
+
+.sistema-referencia__numero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: var(--color-acento);
+  color: var(--color-textoblanco);
+  border-radius: var(--radio-circulo);
+  font-weight: var(--peso-extrabold);
+  font-family: var(--fuente-titulos);
+}
+
+.sistema-referencia h3 {
+  font-size: var(--texto-lg);
+  margin-bottom: var(--espaciado-xs);
+}
+
+
+/* =========================================================
+   03 · PALETA CROMÁTICA
+   ========================================================= */
+
+.sistema-grilla-colores {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--espaciado-parrafos);
+}
+
+.muestra-color {
+  min-width: 0;
+  border: var(--borde-fino) solid var(--color-bordes-card);
+  border-radius: var(--radio-card);
+  overflow: hidden;
+  background-color: var(--color-fondo);
+}
+
+.muestra-color__swatch {
+  height: var(--alto-swatch-color);
+  border-bottom: var(--borde-fino) solid var(--color-bordes-card);
+}
+
+.muestra-color__datos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-xs);
+  padding: var(--espaciado-paddingcomponentes);
+}
+
+.muestra-color__datos code {
+  overflow-wrap: anywhere;
+  font-size: var(--texto-xs);
+}
+
+.muestra-color__datos strong {
+  font-family: var(--fuente-titulos);
+  font-size: var(--texto-md);
+}
+
+.muestra-color__datos p {
+  font-size: var(--texto-sm);
+  line-height: var(--interlineado-cuerpo);
+}
+
+.swatch--fondo {
+  background-color: var(--color-fondo);
+}
+
+.swatch--principal {
+  background-color: var(--color-principal);
+}
+
+.swatch--principal-detalles {
+  background-color: var(--color-principal-detalles);
+}
+
+.swatch--acento {
+  background-color: var(--color-acento);
+}
+
+.swatch--acento-hover {
+  background-color: var(--color-acento-hover);
+}
+
+.swatch--texto-blanco {
+  background-color: var(--color-textoblanco);
+}
+
+.swatch--texto-negro {
+  background-color: var(--color-textonegro);
+}
+
+.swatch--fondo-cards {
+  background-color: var(--color-fondo-cards);
+}
+
+.swatch--fondo-form {
+  background-color: var(--color-fondo-form);
+}
+
+.swatch--fondo-alternativo {
+  background-color: var(--color-fondo-alternativo);
+}
+
+.swatch--bordes {
+  background-color: var(--color-bordes-card);
+}
+
+
+/* =========================================================
+   03 · ESCALA TIPOGRÁFICA
+   ========================================================= */
+
+.sistema-lista-tokens {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-componentes);
+}
+
+.fila-token {
+  border-bottom: var(--borde-fino) solid var(--color-bordes-card);
+  padding-bottom: var(--espaciado-componentes);
+}
+
+.fila-token:last-child {
+  border-bottom: none;
+  padding-bottom: var(--espaciado-cero);
+}
+
+.fila-token__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espaciado-columnas);
+  margin-bottom: var(--espaciado-parrafos);
+}
+
+.fila-token__meta span {
+  font-size: var(--texto-sm);
+  color: var(--color-textonegro);
+}
+
+.fila-token__meta code {
+  overflow-wrap: anywhere;
+}
+
+.ejemplo-display {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(var(--texto-subtitulo), 6vw, var(--texto-display));
+  font-weight: var(--peso-bold);
+  color: var(--color-principal);
+  line-height: var(--interlineado-display);
+}
+
+.ejemplo-titulo {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(var(--texto-titulocard), 4.5vw, var(--texto-titulo));
+  font-weight: var(--peso-bold);
+  color: var(--color-principal);
+}
+
+.ejemplo-subtitulo {
+  font-family: var(--fuente-titulos);
+  font-size: var(--texto-subtitulo);
+  color: var(--color-principal);
+}
+
+.ejemplo-card {
+  font-family: var(--fuente-titulos);
+  font-size: var(--texto-titulocard);
+  color: var(--color-principal);
+  font-weight: var(--peso-bold);
+}
+
+.ejemplo-cta {
+  font-family: var(--fuente-titulos);
+  font-size: var(--texto-cta);
+  color: var(--color-acento);
+  font-weight: var(--peso-bold);
+}
+
+.ejemplo-parrafo {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--texto-parrafo);
+  line-height: var(--interlineado-cuerpo);
+}
+
+
+/* =========================================================
+   03 · ESCALA DE ESPACIADOS
+   ========================================================= */
+
+.fila-espacio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-xs);
+  border-bottom: var(--borde-fino) solid var(--color-bordes-card);
+  padding-bottom: var(--espaciado-parrafos);
+}
+
+.fila-espacio:last-child {
+  border-bottom: none;
+  padding-bottom: var(--espaciado-cero);
+}
+
+.barra-espacio {
+  height: 12px;
+  background-color: var(--color-acento);
+  border-radius: var(--radio-pill);
+}
+
+.barra-espacio--columnas {
+  width: 8px;
+}
+
+.barra-espacio--parrafos {
+  width: 16px;
+}
+
+.barra-espacio--padding {
+  width: 18px;
+}
+
+.barra-espacio--componentes {
+  width: 26px;
+}
+
+.barra-espacio--secciones {
+  width: 34px;
+}
+
+
+/* =========================================================
+   04 · INVENTARIO DE COMPONENTES
+   ========================================================= */
+
+.sistema-inventario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-componentes);
+  border-top: var(--borde-fino) solid var(--color-bordes-card);
+  padding-top: var(--espaciado-componentes);
+}
+
+.sistema-inventario__cabecera h3 {
+  margin-bottom: var(--espaciado-xs);
+}
+
+.sistema-muestrario-atomos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espaciado-componentes);
+  padding: var(--espaciado-componentes);
+  background-color: var(--color-fondo);
+  border-radius: var(--radio-card);
+}
+
+.sistema-muestra {
+  min-width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espaciado-parrafos);
+}
+
+.sistema-muestra .btn-primario {
+  min-width: 0;
+  font-size: var(--texto-sm);
+  padding: var(--espaciado-s) var(--espaciado-parrafos);
+}
+
+.sistema-muestra .btn-secundario {
+  font-size: var(--texto-sm);
+  padding: var(--espaciado-s) var(--espaciado-parrafos);
+}
+
+.sistema-muestra code {
+  font-size: var(--texto-xs);
+  overflow-wrap: anywhere;
+}
+
+.sistema-lista-clases {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaciado-columnas);
+}
+
+.sistema-lista-clases span {
+  background-color: var(--color-fondo);
+  border: var(--borde-fino) solid var(--color-bordes-card);
+  border-radius: var(--radio-pill);
+  padding: var(--espaciado-xs) var(--espaciado-parrafos);
+  font-family: var(--fuente-codigo);
+  font-size: var(--texto-xs);
+  color: var(--color-principal-detalles);
+}
+
+
+/* MOLÉCULAS */
+
+.sistema-grilla-moleculas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-parrafos);
+}
+
+.sistema-molecula {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--espaciado-parrafos);
+  padding: var(--espaciado-paddingcomponentes);
+  background-color: var(--color-fondo);
+  border: var(--borde-fino) solid var(--color-bordes-card);
+  border-radius: var(--radio-card);
+  min-width: 0;
+}
+
+.sistema-molecula > code {
+  font-size: var(--texto-xs);
+  overflow-wrap: anywhere;
+}
+
+.sistema-demo-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espaciado-parrafos);
+  color: var(--color-principal-detalles);
+  font-size: var(--texto-sm);
+  font-weight: var(--peso-bold);
+}
+
+.sistema-demo-logo {
+  color: var(--color-principal);
+  font-family: var(--fuente-titulos);
+  font-weight: var(--peso-extrabold);
+}
+
+.sistema-demo-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-xs);
+}
+
+.sistema-demo-form label {
+  font-size: var(--texto-sm);
+  color: var(--color-principal);
+  font-weight: var(--peso-bold);
+}
+
+.sistema-demo-form input {
+  width: 100%;
+  min-width: 0;
+  padding: var(--espaciado-l);
+  border: var(--borde-fino) solid var(--color-bordes-card);
+  border-radius: var(--radio-md);
+  background-color: var(--color-fondo-cards);
+  font-family: var(--fuente-cuerpo);
+}
+
+.sistema-demo-red {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--espaciado-parrafos);
+  color: var(--color-principal);
+  font-weight: var(--peso-bold);
+}
+
+.sistema-demo-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-xs);
+  background-color: var(--color-fondo-cards);
+  border-radius: var(--radio-card);
+  padding: var(--espaciado-paddingcomponentes);
+}
+
+.sistema-demo-card > span {
+  font-size: var(--texto-titulocard);
+}
+
+.sistema-demo-card strong {
+  font-family: var(--fuente-titulos);
+  color: var(--color-principal);
+}
+
+.sistema-demo-card p {
+  font-size: var(--texto-sm);
+}
+
+
+/* ORGANISMOS */
+
+.sistema-grilla-organismos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-parrafos);
+}
+
+.sistema-organismo {
+  min-width: 0;
+  overflow: hidden;
+  border: var(--borde-fino) solid var(--color-bordes-card);
+  border-radius: var(--radio-card);
+  background-color: var(--color-fondo-cards);
+}
+
+.sistema-organismo__visual {
+  min-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--espaciado-parrafos);
+  padding: var(--espaciado-paddingcomponentes);
+  background-color: var(--color-fondo);
+  color: var(--color-principal-detalles);
+  font-size: var(--texto-sm);
+  font-weight: var(--peso-bold);
+}
+
+.sistema-organismo__header {
+  background-color: var(--color-principal);
+  color: var(--color-textoblanco);
+}
+
+.sistema-organismo__hero {
+  min-height: 150px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.sistema-organismo__hero strong {
+  font-family: var(--fuente-titulos);
+  font-size: var(--texto-titulocard);
+  color: var(--color-principal);
+}
+
+.sistema-organismo__footer {
+  background-color: var(--color-principal);
+  color: var(--color-textoblanco);
+}
+
+.sistema-organismo__cards span {
+  font-size: var(--texto-titulocard);
+}
+
+.sistema-organismo__ficha {
+  justify-content: space-between;
+}
+
+.sistema-organismo__form {
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.sistema-mini-boton {
+  display: inline-block;
+  padding: var(--espaciado-xs) var(--espaciado-parrafos);
+  border-radius: var(--radio-md);
+  background-color: var(--color-acento);
+  color: var(--color-textoblanco);
+  font-size: var(--texto-xs);
+}
+
+.sistema-organismo__datos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-xs);
+  padding: var(--espaciado-paddingcomponentes);
+}
+
+.sistema-organismo__datos strong {
+  color: var(--color-principal-detalles);
+  font-family: var(--fuente-codigo);
+  font-size: var(--texto-sm);
+}
+
+.sistema-organismo__datos p {
+  font-size: var(--texto-sm);
+}
+
+
+/* =========================================================
+   05 · DECISIONES TÉCNICAS
+   ========================================================= */
+
+.sistema-decisiones {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-parrafos);
+}
+
+.sistema-decisiones h3 {
+  font-size: var(--texto-lg);
+  margin-bottom: 0;
+}
+
+.sistema-decisiones p {
+  margin-bottom: var(--espaciado-parrafos);
+}
+
+
+/* =========================================================
+   06 · GRILLA RESPONSIVA
+   ========================================================= */
+
+.sistema-grilla-formatos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-componentes);
+}
+
+.sistema-formato {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-parrafos);
+  padding: var(--espaciado-paddingcomponentes);
+  background-color: var(--color-fondo);
+  border: var(--borde-fino) solid var(--color-bordes-card);
+  border-radius: var(--radio-card);
+}
+
+.sistema-formato__datos h3 {
+  font-size: var(--texto-lg);
+  margin-bottom: var(--espaciado-xs);
+}
+
+.sistema-formato__datos strong,
+.sistema-formato__datos span {
+  display: block;
+  font-size: var(--texto-sm);
+}
+
+.sistema-formato__datos strong {
+  color: var(--color-principal-detalles);
+}
+
+.demo-grilla-visual {
+  display: grid;
+  gap: var(--espaciado-columnas);
+}
+
+.demo-grilla-visual span {
+  min-width: 0;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-fondo-cards);
+  border: var(--borde-fino) solid var(--color-bordes-card);
+  border-radius: var(--radio-sm);
+  color: var(--color-principal-detalles);
+  font-family: var(--fuente-titulos);
+  font-weight: var(--peso-bold);
+  font-size: var(--texto-sm);
+}
+
+.demo-grilla-mobile {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.demo-grilla-tablet {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.demo-grilla-desktop {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.demo-grilla-tablet span,
+.demo-grilla-desktop span {
+  min-height: 64px;
+}
+
+
+/* =========================================================
+   RESPONSIVE · MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .sistema-encabezado__bloque,
+  .sistema-bloque {
+    padding: var(--espaciado-paddingcomponentes);
+  }
+
+  .sistema-grilla-colores {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--espaciado-columnas);
+  }
+
+  .muestra-color__datos {
+    padding: var(--espaciado-l);
+  }
+
+  .muestra-color__datos code {
+    font-size: 11px;
+  }
+
+  .muestra-color__datos strong {
+    font-size: var(--texto-sm);
+  }
+
+  .muestra-color__datos p {
+    font-size: var(--texto-xs);
+  }
+
+  .sistema-referencia {
+    grid-template-columns: 1fr;
+  }
+
+  .sistema-referencia__numero {
+    width: 32px;
+    height: 32px;
+  }
+
+  .sistema-muestrario-atomos {
+    gap: var(--espaciado-parrafos);
+  }
+
+  .sistema-muestra {
+    min-width: 115px;
+  }
+
+  .demo-grilla-desktop span {
+    min-height: 34px;
+    font-size: 10px;
+  }
+
+  .demo-grilla-tablet span {
+    min-height: 42px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE · TABLET
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+  .sistema-destacados {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sistema-grilla-colores {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sistema-grilla-moleculas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sistema-grilla-organismos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sistema-grilla-formatos {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE · DESKTOP
+   ========================================================= */
+
+@media (min-width: 1024px) {
+
+  .sistema-encabezado__bloque,
+  .sistema-bloque {
+    padding: var(--espaciado-secciones);
+  }
+
+  .sistema-grilla-colores {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .sistema-grilla-moleculas {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sistema-grilla-organismos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sistema-grilla-formatos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+}

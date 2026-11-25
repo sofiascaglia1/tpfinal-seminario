@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kity en Adopción | Callejeritos Gonnet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       ORGANISMO: .header
+       ========================================================= -->
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="index.html" class="logo" aria-label="Inicio Callejeritos Gonnet">
+        <svg class="logo__svg" viewBox="0 0 110 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M22 36 L26 16 L32 10 L35 17 L41 19 L37 24 L47 21 L49 24 L38 29 L38 36 Z" fill="currentColor"/>
+          <path d="M63 36 L65 25 L61 21 L64 17 L68 19 L72 17 L74 22 L82 24 L86 14 L89 15 L85 27 L84 36 Z" fill="currentColor"/>
+          <rect x="16" y="36" width="78" height="76" stroke="currentColor" stroke-width="3.5"/>
+          <text x="55" y="88" text-anchor="middle" fill="currentColor" font-family="cursive, Georgia, serif" font-style="italic" font-size="44">CG</text>
+        </svg>
+      </a>
+
+      <nav class="barra-navegacion" aria-label="Navegación principal">
+        <ul class="barra-navegacion__lista">
+          <li><a href="quienes-somos.html" class="header_item">¿Quiénes somos?</a></li>
+          <li><a href="adopciones.html" class="header_item header_item--activo">Adopciones</a></li>
+          <li><a href="como-ayudar.html" class="header_item">Cómo ayudar</a></li>
+          <li><a href="agenda.html" class="header_item">Agenda</a></li>
+          <li><a href="contacto.html" class="header_item">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="como-ayudar.html#donar" class="btn-primario">¡Doná ahora!</a>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       ORGANISMO: .ficha-mascota (Etapa 2.2 y 2.3 del PDF)
+       ========================================================= -->
+  <main class="layout-principal">
+    <section class="seccion-grid detalle-adopcion" aria-labelledby="titulo-kity">
+      <nav class="detalle-adopcion__volver" aria-label="Volver a adopciones">
+        <a href="adopciones.html" class="btn-secundario">← Volver a adopciones</a>
+      </nav>
+
+      <article class="ficha-mascota">
+        <div class="ficha-mascota__info">
+          <h1 id="titulo-kity">Kity</h1>
+          <p>Me llamo Kity, y aunque mi pasado en la calle no fue fácil, hoy estoy recuperada y con <strong class="texto-remarcado">muchísimas ganas de dar y recibir amor</strong>. Nada me impide saltar, correr y jugar un montón, ¡estoy súper lista para conocer a mi familia para siempre!</p>
+          <p>Me considero muy <strong class="texto-remarcado">buena, cariñosa y juguetona</strong>. La verdad es que me encantaría que te enamores de mí y que me adoptes así puedo tener un hogar calentito donde ser muy feliz.</p>
+          <a href="contacto.html" class="btn-primario">¡Adoptar!</a>
+        </div>
+
+        <div class="ficha-mascota__media">
+          <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=80" alt="Retrato de Kity en adopción" class="img-mascotas">
+          <div class="ficha-mascota__etiquetas">
+            <span class="etiqueta-caracteristica">Mimosa</span>
+            <span class="etiqueta-edad">Adulto</span>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       ORGANISMO: .footer
+       ========================================================= -->
+  <footer class="footer">
+    <div class="footer__contenedor">
+      <nav class="footer__enlaces" aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="contacto.html">Contactanos</a></li>
+          <li><a href="como-ayudar.html">Colaborar</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="agenda.html">Agenda Gonnet</a></li>
+          <li><a href="sistema.html">Sistema de Diseño</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__redes">
+        <p>¡Seguinos en redes sociales!</p>
+        <div class="footer__iconos">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Instagram">IG</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

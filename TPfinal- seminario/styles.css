@@ -1,0 +1,1376 @@
+/* ==========================================================================
+   1) CSS CUSTOM PROPERTIES (ETAPA 2.1 + TOKENS AUXILIARES EN :root)
+   Ningún valor de color, tipografía, espaciado o borde está hardcodeado fuera.
+   ========================================================================== */
+:root {
+  --color-fondo: #FFF1D6;
+  --color-principal: #FF9E3F;
+  --color-principal-detalles: #eb8100;
+  --color-acento: #01BFB3;
+  --color-acento-hover: #09EBDD;
+  --color-textoblanco: #FFFFFF;
+  --color-fondo-cards: #FFFFFF;
+  --color-fondo-form: #FFFFFF;
+  --color-textonegro: #000000;
+  --color-fondo-alternativo: #FFF1D6;
+  --color-bordes-card: #FFD8AD;
+  --texto-display: 58px;
+  --texto-titulo: 48px;
+  --texto-subtitulo: 32px;
+  --texto-titulocard: 28px;
+  --texto-cta: 28px;
+  --texto-parrafo: 20px;
+  --espaciado-columnas: 8px;
+  --espaciado-parrafos: 16px;
+  --espaciado-paddingcomponentes: 18px;
+  --espaciado-componentes: 56px;
+  --espaciado-secciones: 54px;
+}
+
+/* ==========================================================================
+   RESET Y JERARQUÍA SEMÁNTICA
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: var(--color-fondo);
+  color: var(--color-textonegro);
+  font-family: 'Nunito', sans-serif;
+  font-size: var(--texto-parrafo);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+code {
+  font-family: monospace;
+  font-size: 16px;
+  color: var(--color-principal-detalles);
+  font-weight: 700;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(var(--texto-subtitulo), 5.5vw, var(--texto-display));
+  font-weight: 700;
+  color: var(--color-principal);
+  line-height: 1.08;
+  margin-bottom: var(--espaciado-parrafos);
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(var(--texto-titulocard), 4.2vw, var(--texto-titulo));
+  font-weight: 700;
+  color: var(--color-principal);
+  line-height: 1.15;
+  margin-bottom: var(--espaciado-parrafos);
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(24px, 3.5vw, var(--texto-subtitulo));
+  color: var(--color-principal);
+  line-height: 1.2;
+  margin-bottom: var(--espaciado-parrafos);
+}
+
+p {
+  margin-bottom: var(--espaciado-parrafos);
+}
+
+p:last-child {
+  margin-bottom: 0px;
+}
+
+.titulo-centrado {
+  text-align: center;
+}
+
+.texto-remarcado {
+  color: var(--color-principal-detalles);
+}
+
+/* ==========================================================================
+   ÁTOMOS (ETAPA 2.2)
+   ========================================================================== */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-textoblanco);
+}
+
+.logo__svg {
+  width: 64px;
+  height: auto;
+  display: block;
+}
+
+.header_item {
+  color: var(--color-textoblanco);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  padding: var(--espaciado-columnas) var(--espaciado-parrafos);
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.header_item:hover,
+.header_item:focus-visible,
+.header_item--activo {
+  background-color: var(--color-principal-detalles);
+}
+
+.btn-primario {
+  display: inline-block;
+  min-width: 240px;
+  background-color: var(--color-acento);
+  color: var(--color-textoblanco);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(var(--texto-parrafo), 2.2vw, var(--texto-cta));
+  text-decoration: none;
+  padding: 12px var(--espaciado-secciones);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primario:hover,
+.btn-primario:focus-visible {
+  background-color: var(--color-acento-hover);
+  color: var(--color-textonegro);
+  transform: translateY(-2px);
+}
+
+.btn-secundario {
+  display: inline-block;
+  background-color: var(--color-fondo-alternativo);
+  color: var(--color-principal-detalles);
+  border: 2px solid var(--color-principal-detalles);
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--texto-parrafo);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secundario:hover,
+.btn-secundario:focus-visible {
+  background-color: var(--color-bordes-card);
+  color: var(--color-textonegro);
+}
+
+.etiqueta-caracteristica {
+  display: inline-block;
+  border: 2px solid var(--color-acento);
+  color: var(--color-acento);
+  background-color: var(--color-fondo-cards);
+  padding: 4px var(--espaciado-parrafos);
+  border-radius: 999px;
+  font-size: var(--texto-parrafo);
+  font-weight: 700;
+  align-self: flex-start;
+}
+
+.etiqueta-edad {
+  display: inline-block;
+  border: 2px solid var(--color-principal);
+  color: var(--color-principal);
+  background-color: var(--color-fondo-cards);
+  padding: 4px var(--espaciado-parrafos);
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 700;
+  align-self: flex-start;
+}
+
+.icono-redes {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 16px;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.icono-redes:hover {
+  transform: scale(1.08);
+}
+
+.img-mascotas {
+  border-radius: 20px;
+  object-fit: cover;
+  width: 100%;
+  border: 3px solid var(--color-bordes-card);
+}
+
+.img-card {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   HEADER Y FOOTER (ETAPA 2.2)
+   ========================================================================== */
+.header {
+  background-color: var(--color-principal);
+  padding: 12px var(--espaciado-paddingcomponentes);
+}
+
+.header__contenedor {
+  max-width: 1280px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaciado-parrafos);
+}
+
+.header .btn-primario {
+  min-width: auto;
+  padding: 6px 20px;
+  font-size: 22px;
+}
+
+.barra-navegacion__lista {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaciado-parrafos);
+}
+
+.footer {
+  background-color: var(--color-principal);
+  color: var(--color-textoblanco);
+  padding: var(--espaciado-componentes) var(--espaciado-paddingcomponentes);
+}
+
+.footer__contenedor {
+  max-width: 1280px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-componentes);
+}
+
+.footer__enlaces ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-columnas);
+}
+
+.footer__enlaces a {
+  color: var(--color-textoblanco);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer__iconos {
+  display: flex;
+  gap: var(--espaciado-parrafos);
+}
+
+/* ==========================================================================
+   2) CSS GRID — ESTRUCTURA MACRO (ETAPA 2.3: 4 -> 8 -> 12 COLUMNAS)
+   ========================================================================== */
+.layout-principal {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 52px;
+  padding-top: 52px;
+}
+
+/* Grilla base Mobile: 4 columnas (375px+) */
+.seccion-grid {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0px auto;
+  padding-inline: var(--espaciado-paddingcomponentes);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: var(--espaciado-columnas);
+  row-gap: var(--espaciado-componentes);
+}
+
+/* ==========================================================================
+   PÁGINA 1: INICIO (HERO + ADOPTÁ + BLOQUE ILUSTRADO)
+   ========================================================================== */
+.hero__texto,
+.hero__imagen,
+.adopcion-destacada__imagen,
+.adopcion-destacada__texto {
+  grid-column: 1 / -1;
+}
+
+.hero__texto p {
+  margin-bottom: var(--espaciado-secciones);
+}
+
+.hero__collage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--espaciado-columnas);
+  align-items: end;
+}
+
+.hero__foto-principal {
+  grid-column: 1 / 4;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+.hero__foto-secundaria {
+  grid-column: 3 / 5;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 28px;
+  margin-top: -110px;
+  transform: rotate(6deg);
+  box-shadow: 0 10px 24px rgba(var(--color-textonegro), 0.5);
+}
+
+.adopcion-destacada__foto {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+.adopcion-destacada__texto .btn-primario {
+  margin-top: var(--espaciado-parrafos);
+}
+
+/* Sección ilustrada compartida */
+
+.seccion-ilustrada {
+  background-image: url("assets/fondoilustrado.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--espaciado-secciones);
+  margin-top: var(--espaciado-secciones);
+  min-height: 600px;
+}
+
+.seccion-ilustrada__fondo {
+  position: absolute;
+  inset: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.seccion-ilustrada__grilla {
+  position: relative;
+  z-index: 1;
+}
+
+
+.seccion-ilustrada__contenido {
+  grid-column: 1 / -1;
+  text-align: center;
+  max-width: 820px;
+  margin: 0px auto;
+}
+
+.seccion-ilustrada__contenido .btn-primario {
+  margin-top: var(--espaciado-parrafos);
+}
+
+
+
+/* ==========================================================================
+   PÁGINA 2: QUIÉNES SOMOS (HERO + MÉTRICAS/HISTORIA + VALORES)
+   ========================================================================== */
+.quienes-somos__intro,
+.quienes-somos__imagen,
+.metricas-superiores,
+.panel-historia,
+.seccion-valores__titulo,
+.cards-valores {
+  grid-column: 1 / -1;
+}
+.galeria-quienes__foto {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.galeria-quienes__contenedor {
+  position: relative;
+  overflow: hidden;
+}
+
+.galeria-quienes__foto--activa {
+  display: block;
+}
+
+.galeria-quienes__flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.galeria-quienes__anterior {
+  left: 10px;
+}
+
+.galeria-quienes__siguiente {
+  right: 10px;
+}
+
+.galeria-quienes__puntos {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--espaciado-parrafos);
+}
+
+.punto-galeria {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--color-bordes-card);
+}
+
+.punto-galeria--activo {
+  background-color: var(--color-acento);
+}
+
+.metricas-superiores {
+  background-color: var(--color-fondo-cards);
+  border-radius: 20px;
+  padding: var(--espaciado-componentes);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--espaciado-componentes);
+  text-align: center;
+}
+
+.metrica-item__numero {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(var(--texto-subtitulo), 4vw, var(--texto-titulo));
+  font-weight: 800;
+  color: var(--color-principal);
+  margin-bottom: 4px;
+}
+
+.metrica-item__etiqueta {
+  font-size: 16px;
+  color: var(--color-textonegro);
+}
+
+.panel-historia {
+  background-color: var(--color-principal);
+  color: var(--color-textoblanco);
+  border-radius: 28px;
+  padding: var(--espaciado-secciones) var(--espaciado-componentes);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-secciones);
+}
+
+.panel-historia__superior {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-componentes);
+  align-items: center;
+}
+
+.badge-historia {
+  display: inline-block;
+  background-color: var(--color-principal-detalles);
+  color: var(--color-textoblanco);
+  padding: 4px var(--espaciado-parrafos);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: var(--espaciado-parrafos);
+}
+
+.panel-historia__texto h2 {
+  color: var(--color-textoblanco);
+}
+
+.panel-historia__destaque {
+  display: block;
+  color: var(--color-acento-hover);
+}
+
+.panel-historia__datos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-parrafos);
+}
+
+.dato-destacado {
+  background-color: var(--color-principal-detalles);
+  border-radius: 16px;
+  padding: var(--espaciado-paddingcomponentes);
+  display: flex;
+  align-items: center;
+  gap: var(--espaciado-parrafos);
+}
+
+.dato-destacado__cifra {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--texto-subtitulo);
+  font-weight: 800;
+  color: var(--color-acento-hover);
+  flex-shrink: 0;
+}
+
+.linea-tiempo {
+  background-color: var(--color-principal-detalles);
+  border-radius: 20px;
+  padding: var(--espaciado-componentes);
+}
+
+.linea-tiempo__titulo {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: var(--espaciado-componentes);
+}
+
+.linea-tiempo__lista {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-componentes);
+  text-align: center;
+}
+
+.hito-tiempo__punto {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-principal);
+  border: 3px solid var(--color-textoblanco);
+  margin-bottom: var(--espaciado-columnas);
+}
+
+.hito-tiempo--actual .hito-tiempo__punto {
+  background-color: var(--color-acento);
+}
+
+.hito-tiempo h3 {
+  color: var(--color-textoblanco);
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.hito-tiempo--actual h3 {
+  color: var(--color-acento-hover);
+}
+
+.hito-tiempo p {
+  font-size: 14px;
+  color: var(--color-fondo);
+}
+
+.seccion-valores {
+background-image: url("assets/fondocards.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-block: 52px;
+}
+
+.seccion-valores__titulo {
+  color: var(--color-textoblanco);
+}
+
+.cards-valores {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-componentes);
+}
+
+/* ==========================================================================
+   PÁGINA 3 Y 3B: ADOPCIONES (CARRUSEL + POR QUÉ ADOPTAR + HISTORIAS) Y FICHA
+   ========================================================================== */
+.adopciones__encabezado,
+.carrusel-adopciones,
+.detalle-adopcion__volver,
+.ficha-mascota,
+.concientizacion-adopcion__contenido,
+.historias-reales__encabezado,
+.historias-reales__grilla {
+  grid-column: 1 / -1;
+}
+
+.adopciones__encabezado {
+  text-align: center;
+  max-width: 820px;
+  margin: 0px auto;
+}
+
+/* Carrusel horizontal con scroll-snap */
+.carrusel-adopciones {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--espaciado-parrafos);
+  scrollbar-color: var(--color-principal) var(--color-bordes-card);
+}
+
+.cards-adopciones {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 255px;
+  gap: var(--espaciado-componentes);
+}
+
+.carrusel-adopciones .contenedor-card {
+  scroll-snap-align: start;
+}
+
+/* Ficha de mascota individual (kity.html) */
+.detalle-adopcion {
+  padding-bottom: 52px;
+}
+
+.ficha-mascota {
+  background-color: var(--color-fondo-cards);
+  border: 2px solid var(--color-bordes-card);
+  border-radius: 28px;
+  padding: var(--espaciado-secciones);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-secciones);
+  align-items: center;
+}
+
+.ficha-mascota__etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaciado-parrafos);
+  margin-top: var(--espaciado-parrafos);
+  justify-content: center;
+}
+
+.seccion-adopcion {
+  background-image: url("assets/fondoconsciencia.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin-right: 0;
+}
+
+.concientizacion-adopcion__contenido {
+  text-align: center;
+  max-width: 820px;
+  margin: 0px auto;
+  padding-block: var(--espaciado-componentes);
+}
+
+.historias-reales__encabezado {
+  text-align: center;
+}
+
+.historias-reales__grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-componentes);
+}
+
+/* ==========================================================================
+   PÁGINA 4: CÓMO AYUDAR
+   ========================================================================== */
+.banner-voluntariado,
+.bloque-formas-ayuda,
+.cards-pago,
+.cards-colaboracion {
+  grid-column: 1 / -1;
+}
+
+.banner-voluntariado {
+  background-color: var(--color-fondo-cards);
+  border: 2px solid var(--color-bordes-card);
+  border-radius: 28px;
+  padding: var(--espaciado-componentes);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-componentes);
+  align-items: center;
+}
+
+.banner-voluntariado__icono img{
+width: 200%;
+ 
+}
+
+.bloque-formas-ayuda {
+  background-color: var(--color-principal);
+  padding: var(--espaciado-componentes);
+  border-radius: 28px;
+}
+
+.bloque-formas-ayuda h2 {
+  color: var(--color-textoblanco);
+}
+
+.cards-ayuda,
+.cards-pago,
+.cards-colaboracion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-componentes);
+}
+
+.card-pago {
+  background-color: var(--color-fondo-cards);
+  border: 2px solid var(--color-bordes-card);
+  border-radius: 20px;
+  padding: var(--espaciado-paddingcomponentes);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--espaciado-parrafos);
+}
+
+.img-pago-mp {
+width: 50%;
+}
+.img-pago-pp {
+width: 30%;
+}
+
+.card-info {
+  background-color: var(--color-fondo-cards);
+  border: 2px solid var(--color-bordes-card);
+  border-radius: 20px;
+  padding: var(--espaciado-paddingcomponentes);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--espaciado-parrafos);
+}
+
+.lista-insumos {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-columnas);
+}
+
+/* ==========================================================================
+   PÁGINA 5: AGENDA
+   ========================================================================== */
+.agenda__encabezado,
+.agenda__grilla {
+  grid-column: 1 / -1;
+}
+
+.agenda__encabezado {
+  text-align: center;
+}
+
+.agenda__grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-componentes);
+}
+
+/* ==========================================================================
+   PÁGINA 6: CONTACTO
+   ========================================================================== */
+.contacto__info,
+.form-contacto {
+  grid-column: 1 / -1;
+}
+
+.colaboradores-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaciado-parrafos);
+  margin-bottom: var(--espaciado-componentes);
+}
+
+.logo-colaboradores {
+  background-color: var(--color-principal);
+  color: var(--color-textoblanco);
+  font-family: 'Poppins', sans-serif;
+  padding: var(--espaciado-paddingcomponentes);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  border: 3px solid var(--color-bordes-card);
+}
+
+.red-social {
+  color: var(--color-acento);
+}
+
+.red-social__enlaces {
+  display: flex;
+  gap: var(--espaciado-parrafos);
+}
+
+.form-contacto {
+  background-color: var(--color-fondo-form);
+  border: 2px solid var(--color-bordes-card);
+  border-radius: 28px;
+  padding: var(--espaciado-componentes);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-parrafos);
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-columnas);
+}
+
+.etiqueta-form {
+  color: var(--color-principal);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.campo-form input,
+.campo-form select,
+.campo-form textarea {
+  width: 100%;
+  padding: 12px var(--espaciado-parrafos);
+  border-radius: 10px;
+  border: 2px solid var(--color-bordes-card);
+  background-color: var(--color-fondo);
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: var(--color-textonegro);
+}
+
+/* ==========================================================================
+   PÁGINA 7: SISTEMA DE DISEÑO (ETAPA 4 - DOCUMENTACIÓN)
+   ========================================================================== */
+.sistema-encabezado__bloque,
+.sistema-bloque__cabecera,
+.sistema-grilla-colores,
+.sistema-lista-tokens,
+.sistema-muestrario-atomos,
+.sistema-demo-container,
+.demo-grilla-visual {
+  grid-column: 1 / -1;
+}
+
+.sistema-encabezado__bloque,
+.sistema-bloque {
+  background-color: var(--color-fondo-cards);
+  border: 2px solid var(--color-bordes-card);
+  border-radius: 28px;
+  padding: var(--espaciado-componentes);
+}
+
+.sistema-grilla-colores {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaciado-parrafos);
+}
+
+.muestra-color {
+  border: 2px solid var(--color-bordes-card);
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--color-fondo);
+}
+
+.muestra-color__swatch {
+  height: 72px;
+  border-bottom: 2px solid var(--color-bordes-card);
+}
+
+.swatch--fondo { background-color: var(--color-fondo); }
+.swatch--principal { background-color: var(--color-principal); }
+.swatch--principal-detalles { background-color: var(--color-principal-detalles); }
+.swatch--acento { background-color: var(--color-acento); }
+.swatch--acento-hover { background-color: var(--color-acento-hover); }
+.swatch--bordes { background-color: var(--color-bordes-card); }
+
+.muestra-color__datos {
+  padding: 12px;
+}
+
+.sistema-lista-tokens {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-parrafos);
+}
+
+.fila-token {
+  border-bottom: 2px solid var(--color-bordes-card);
+  padding-bottom: var(--espaciado-parrafos);
+}
+
+.fila-token:last-child {
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+
+.fila-token__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaciado-columnas);
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.ejemplo-display {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(var(--texto-subtitulo), 6vw, var(--texto-display));
+  color: var(--color-principal);
+  line-height: 1.08;
+}
+
+.ejemplo-titulo {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(var(--texto-titulocard), 4.5vw, var(--texto-titulo));
+  color: var(--color-principal);
+}
+
+.ejemplo-subtitulo {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--texto-subtitulo);
+  color: var(--color-principal);
+}
+
+.ejemplo-cta {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--texto-cta);
+  color: var(--color-acento);
+}
+
+.fila-espacio {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.barra-espacio {
+  height: var(--espaciado-parrafos);
+  background-color: var(--color-acento);
+  border-radius: 999px;
+}
+
+.barra-espacio--columnas { width: var(--espaciado-columnas); }
+.barra-espacio--parrafos { width: var(--espaciado-parrafos); }
+.barra-espacio--padding { width: var(--espaciado-paddingcomponentes); }
+.barra-espacio--componentes { width: var(--espaciado-componentes); }
+.barra-espacio--secciones { width: var(--espaciado-secciones); }
+
+.sistema-muestrario-atomos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espaciado-parrafos);
+  padding: var(--espaciado-paddingcomponentes);
+  background-color: var(--color-fondo);
+  border-radius: 16px;
+}
+
+.demo-grilla-visual {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--espaciado-columnas);
+}
+
+.demo-grilla-visual__celda {
+  background-color: var(--color-fondo);
+  border: 2px solid var(--color-bordes-card);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--color-principal-detalles);
+}
+
+/* ==========================================================================
+   3) CONTAINER QUERIES — ADAPTACIÓN DE COMPONENTES SEGÚN SU CONTENEDOR
+   ========================================================================== */
+.contenedor-card {
+  container-type: inline-size;
+  container-name: tarjeta;
+}
+
+.card-valor,
+.card-ayuda {
+  background-color: var(--color-fondo);
+  border: 2px solid var(--color-bordes-card);
+  border-radius: 20px;
+  padding: var(--espaciado-componentes) var(--espaciado-paddingcomponentes);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--espaciado-parrafos);
+}
+
+.card-valor__icono,
+.card-ayuda__icono {
+  font-size: 40px;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  border: 2px solid var(--color-acento);
+  color: var(--color-acento);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-valor__contenido h3,
+.card-ayuda__contenido h3 {
+  font-size: var(--texto-titulocard);
+  margin-bottom: var(--espaciado-columnas);
+}
+
+.card-valor__contenido p,
+.card-ayuda__contenido p {
+  font-size: 16px;
+}
+
+@container tarjeta (min-width: 380px) {
+  .card-valor,
+  .card-ayuda {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+/* Tarjeta del carrusel de adopciones (.card-animales) */
+.card-animales {
+  background-color: var(--color-principal);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+  transition: transform 0.2s ease;
+}
+
+.card-animales:hover {
+  transform: translateY(-2px);
+}
+
+.card-animales__pie {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-animales__pie h2 {
+  color: var(--color-textonegro);
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+
+@container tarjeta (min-width: 280px) {
+  .card-animales .img-card {
+    height: 320px;
+  }
+}
+
+/* Tarjeta de Historias Reales (1 sola foto, sin etiquetas) */
+.card-historia {
+  background-color: var(--color-fondo-cards);
+  border: 2px solid var(--color-bordes-card);
+  border-radius: 20px;
+  padding: var(--espaciado-paddingcomponentes);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-parrafos);
+}
+
+.card-historia__imagen {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.card-historia__contenido h3 {
+  font-size: var(--texto-titulocard);
+  margin-bottom: var(--espaciado-columnas);
+}
+
+@container tarjeta (min-width: 460px) {
+  .card-historia {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .card-historia__imagen {
+    width: 45%;
+    flex-shrink: 0;
+  }
+}
+
+/* Tarjeta de Agenda */
+.card-evento {
+  background-color: var(--color-fondo-cards);
+  border: 2px solid var(--color-bordes-card);
+  border-radius: 20px;
+  padding: var(--espaciado-paddingcomponentes);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-parrafos);
+}
+
+.card-evento__fecha {
+  background-color: var(--color-principal);
+  color: var(--color-textoblanco);
+  border-radius: 14px;
+  padding: 12px var(--espaciado-paddingcomponentes);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  min-width: 84px;
+}
+
+.card-evento__fecha--municipio {
+  background-color: var(--color-acento);
+}
+
+.card-evento__dia {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--texto-subtitulo);
+  line-height: 1;
+}
+
+.card-evento__mes {
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.card-evento__cuerpo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-columnas);
+}
+
+.card-evento__lugar {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-principal-detalles);
+}
+
+@container tarjeta (min-width: 440px) {
+  .card-evento {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* ==========================================================================
+   4) RESPONSIVE DESIGN — TABLET (8 COLUMNAS - 768px - ETAPA 2.3)
+   ========================================================================== */
+@media (min-width: 768px) {
+  .seccion-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .hero__texto,
+  .quienes-somos__intro {
+    grid-column: 1 / 5;
+    align-self: center;
+  }
+
+  .hero__imagen,
+  .quienes-somos__imagen {
+    grid-column: 5 / 9;
+  }
+
+  .adopcion-destacada__imagen {
+    grid-column: 1 / 5;
+  }
+
+  .adopcion-destacada__texto {
+    grid-column: 5 / 9;
+    align-self: center;
+  }
+
+  .ilustracion-izquierda {
+    grid-column: 1 / 5;
+  }
+
+  .ilustracion-derecha {
+    grid-column: 5 / 9;
+  }
+
+  .metricas-superiores {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .panel-historia__superior {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .linea-tiempo__lista {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .cards-valores,
+  .cards-pago,
+  .cards-colaboracion,
+  .agenda__grilla,
+  .sistema-grilla-colores,
+  .historias-reales__grilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-ayuda {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ficha-mascota {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contacto__info {
+    grid-column: 1 / 4;
+  }
+
+  .form-contacto {
+    grid-column: 4 / 9;
+  }
+
+  .demo-grilla-visual {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .footer__contenedor {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .footer__redes {
+    justify-self: end;
+  }
+}
+
+/* ==========================================================================
+   4) RESPONSIVE DESIGN — DESKTOP (12 COLUMNAS - 1024px / 1280px - ETAPA 2.3)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .seccion-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .hero__texto,
+  .quienes-somos__intro {
+    grid-column: 1 / 7;
+  }
+
+  .hero__imagen,
+  .quienes-somos__imagen {
+    grid-column: 7 / 13;
+  }
+
+  .adopcion-destacada__imagen {
+    grid-column: 1 / 6;
+  }
+
+  .adopcion-destacada__texto {
+    grid-column: 7 / 13;
+  }
+
+  .seccion-ilustrada__contenido {
+    grid-column: 3 / 11;
+  }
+
+  .ilustracion-izquierda {
+    grid-column: 1 / 5;
+    margin-top: -110px;
+  }
+
+  .ilustracion-derecha {
+    grid-column: 9 / 13;
+    margin-top: -110px;
+  }
+
+  .cards-valores {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .historias-reales__grilla,
+  .sistema-grilla-colores {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .banner-voluntariado {
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .contacto__info {
+    grid-column: 1 / 6;
+  }
+
+  .form-contacto {
+    grid-column: 6 / 13;
+  }
+
+  .demo-grilla-visual {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}

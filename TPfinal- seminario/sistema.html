@@ -1,0 +1,858 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Diseño | Callejeritos Gonnet</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="sistema.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="index.html" class="logo" aria-label="Inicio Callejeritos Gonnet">
+        <span class="logo__icono">🐾</span>
+        <span class="logo__texto">CG</span>
+      </a>
+
+      <nav class="barra-navegacion" aria-label="Navegación principal">
+        <ul class="barra-navegacion__lista">
+          <li><a href="quienes-somos.html" class="header_item">¿Quiénes somos?</a></li>
+          <li><a href="adopciones.html" class="header_item">Adopciones</a></li>
+          <li><a href="como-ayudar.html" class="header_item">Cómo ayudar</a></li>
+          <li><a href="agenda.html" class="header_item">Agenda</a></li>
+          <li><a href="contacto.html" class="header_item">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="como-ayudar.html#donar" class="btn-primario">¡Doná ahora!</a>
+    </div>
+  </header>
+
+  <main class="layout-principal sistema-pagina">
+
+    <!-- ENCABEZADO -->
+
+    <section class="seccion-grid sistema-encabezado">
+      <div class="sistema-encabezado__bloque">
+        <span class="etiqueta-caracteristica">Documentación · Etapa 4</span>
+        <h1>Sistema de Diseño</h1>
+        <p>
+          Documentación de las decisiones visuales y técnicas que construyen
+          la identidad digital de Callejeritos Gonnet.
+        </p>
+      </div>
+    </section>
+
+    <!-- 1. SOBRE EL CASO -->
+
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-caso">
+
+      <div class="sistema-bloque__cabecera">
+        <span class="sistema-numero">01 · CONTEXTO</span>
+        <h2 id="doc-caso">Sobre el caso</h2>
+      </div>
+
+      <div class="sistema-texto">
+        <h3>Callejeritos Gonnet</h3>
+        <p>
+          Callejeritos Gonnet es una organización dedicada al rescate y
+          protección de animales en situación de calle, principalmente
+          perros y gatos. Su trabajo consiste en brindarles refugio,
+          alimentación, atención veterinaria y cuidados durante su
+          recuperación, para luego encontrarles familias responsables
+          que puedan ofrecerles un hogar.
+        </p>
+
+        <p>
+          El público está formado principalmente por vecinos de Gonnet
+          y localidades cercanas interesados en el bienestar animal.
+          Incluye personas adultas que desean adoptar perros y gatos,
+          colaborar mediante donaciones de dinero, alimentos,
+          medicamentos e insumos, ofrecer hogares de tránsito o
+          participar como voluntarias.
+        </p>
+
+        <p>
+          El sitio web tiene como objetivo recaudar fondos y recursos
+          para garantizar la continuidad de las tareas de rescate,
+          cuidado y recuperación. Busca facilitar las donaciones,
+          comunicar las necesidades de la organización y mostrar
+          el trabajo que realiza, generando conciencia, confianza
+          y compromiso en quienes lo visitan.
+        </p>
+      </div>
+
+      <div class="sistema-destacados">
+        <article class="sistema-destacado">
+          <span>01</span>
+          <h3>Organización</h3>
+          <p>Rescate y protección animal.</p>
+        </article>
+
+        <article class="sistema-destacado">
+          <span>02</span>
+          <h3>Público</h3>
+          <p>Vecinos, adoptantes y colaboradores.</p>
+        </article>
+
+        <article class="sistema-destacado">
+          <span>03</span>
+          <h3>Objetivo web</h3>
+          <p>Transformar visitas en colaboraciones concretas.</p>
+        </article>
+      </div>
+
+    </section>
+
+    <!-- 2. ANÁLISIS DE REFERENCIA -->
+
+   <section class="sistema-seccion sistema-deconstruccion">
+    <div class="sistema-seccion__encabezado">
+        <span class="sistema-etiqueta">Análisis conceptual</span>
+        <h2>Diseño Atómico y Design Systems</h2>
+        <p>
+            El Diseño Atómico permite organizar los componentes de una interfaz
+            en distintos niveles de complejidad, mientras que un Design System
+            establece las reglas, criterios y procesos que permiten mantener
+            y evolucionar esos componentes de manera consistente.
+        </p>
+    </div>
+
+    <div class="sistema-comparacion">
+        <article class="sistema-comparacion__bloque">
+            <h3>Diseño Atómico</h3>
+            <p>Responde al qué construir y cómo organizarlo.</p>
+            <ul>
+                <li><strong>Átomos:</strong> elementos básicos, como colores, botones e inputs.</li>
+                <li><strong>Moléculas:</strong> combinaciones de átomos que cumplen una función.</li>
+                <li><strong>Organismos:</strong> estructuras más complejas formadas por moléculas y átomos.</li>
+            </ul>
+        </article>
+
+        <article class="sistema-comparacion__bloque">
+            <h3>Design System</h3>
+            <p>Responde al cómo gobernar y mantener el sistema.</p>
+            <ul>
+                <li>Define criterios para incorporar nuevos componentes.</li>
+                <li>Documenta el uso correcto de cada elemento.</li>
+                <li>Establece cómo gestionar variantes y modificaciones.</li>
+                <li>Organiza el mantenimiento y el versionado.</li>
+            </ul>
+        </article>
+    </div>
+
+    <div class="sistema-limitaciones">
+        <h3>Limitaciones del Diseño Atómico</h3>
+
+        <div class="sistema-limitacion">
+            <span>01</span>
+            <div>
+                <h4>Jerarquía poco definida</h4>
+                <p>
+                    En interfaces complejas, no siempre es sencillo determinar
+                    si un componente pertenece a la categoría de molécula,
+                    organismo o template.
+                </p>
+            </div>
+        </div>
+
+        <div class="sistema-limitacion">
+            <span>02</span>
+            <div>
+                <h4>Ausencia de gobernanza</h4>
+                <p>
+                    No establece quién toma las decisiones sobre los componentes
+                    ni cómo se resuelven las necesidades de distintos equipos.
+                </p>
+            </div>
+        </div>
+
+        <div class="sistema-limitacion">
+            <span>03</span>
+            <div>
+                <h4>Falta de enfoque temporal</h4>
+                <p>
+                    No contempla por sí solo cómo mantener y actualizar
+                    componentes cuando otros elementos del sistema dependen de ellos.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sistema-aplicacion">
+        <h3>Aplicación en nuestro proyecto</h3>
+        <p>
+            En Callejeritos Gonnet utilizamos la lógica del Diseño Atómico
+            para clasificar y organizar los elementos de la interfaz.
+            Identificamos átomos, moléculas y organismos según su nivel
+            de complejidad, y establecimos criterios visuales compartidos
+            para mantener la coherencia entre las distintas secciones del sitio.
+        </p>
+    </div>
+</section>
+
+    <!-- 3. VARIABLES DEL SISTEMA -->
+
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-variables">
+
+      <div class="sistema-bloque__cabecera">
+        <span class="sistema-numero">03 · IDENTIDAD VISUAL</span>
+        <h2 id="doc-variables">Variables del sistema</h2>
+        <p>
+          Tokens visuales definidos en la Etapa 2.1 e implementados
+          mediante propiedades personalizadas de CSS.
+        </p>
+      </div>
+
+      <!-- PALETA CROMÁTICA -->
+
+      <div class="sistema-subseccion">
+        <h3>Paleta cromática</h3>
+        <p>
+          La selección busca equilibrar calidez emocional y dinamismo.
+          Los naranjas transmiten energía, cercanía y optimismo; el fondo
+          crema aporta suavidad y los acentos turquesas evocan confianza,
+          frescura y orientan la atención hacia las acciones principales.
+        </p>
+      </div>
+
+      <div class="sistema-grilla-colores">
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--fondo"></div>
+          <div class="muestra-color__datos">
+            <code>--color-fondo</code>
+            <strong>#FFF1D6</strong>
+            <p>Fondo principal.</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--principal"></div>
+          <div class="muestra-color__datos">
+            <code>--color-principal</code>
+            <strong>#FF9E3F</strong>
+            <p>Títulos, header y footer.</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--principal-detalles"></div>
+          <div class="muestra-color__datos">
+            <code>--color-principal-detalles</code>
+            <strong>#F78F0D</strong>
+            <p>Ilustraciones y palabras remarcadas.</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--acento"></div>
+          <div class="muestra-color__datos">
+            <code>--color-acento</code>
+            <strong>#01BFB3</strong>
+            <p>Botones principales e ilustraciones.</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--acento-hover"></div>
+          <div class="muestra-color__datos">
+            <code>--color-acento-hover</code>
+            <strong>#09EBDD</strong>
+            <p>Estado hover de botones.</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--texto-blanco"></div>
+          <div class="muestra-color__datos">
+            <code>--color-textoblanco</code>
+            <strong>#FFFFFF</strong>
+            <p>Texto sobre fondos oscuros.</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--texto-negro"></div>
+          <div class="muestra-color__datos">
+            <code>--color-textonegro</code>
+            <strong>#000000</strong>
+            <p>Texto sobre fondos claros.</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--fondo-cards"></div>
+          <div class="muestra-color__datos">
+            <code>--color-fondo-cards</code>
+            <strong>#FFFFFF</strong>
+            <p>Tarjetas de información.</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--fondo-form"></div>
+          <div class="muestra-color__datos">
+            <code>--color-fondo-form</code>
+            <strong>#FFFFFF</strong>
+            <p>Fondo de formularios.</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--fondo-alternativo"></div>
+          <div class="muestra-color__datos">
+            <code>--color-fondo-alternativo</code>
+            <strong>#FFF1D6</strong>
+            <p>Fondo alternativo de secciones.</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--bordes"></div>
+          <div class="muestra-color__datos">
+            <code>--color-bordes-card</code>
+            <strong>#FFD8AD</strong>
+            <p>Bordes sutiles de tarjetas.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- TIPOGRAFÍA -->
+
+      <div class="sistema-subseccion">
+        <h3>Escala tipográfica</h3>
+        <p>
+          La jerarquía tipográfica organiza la información y facilita
+          la lectura. Poppins se utiliza en encabezados y Nunito en
+          textos de lectura continua.
+        </p>
+      </div>
+
+      <div class="sistema-lista-tokens">
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-display</code>
+            <span>72px · H1 / Hero</span>
+          </div>
+          <p class="ejemplo-display">Ellos nos necesitan</p>
+        </div>
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-titulo</code>
+            <span>48px · H2 / Secciones</span>
+          </div>
+          <p class="ejemplo-titulo">Nuestros valores</p>
+        </div>
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-subtitulo</code>
+            <span>32px · H3 / Subtítulos</span>
+          </div>
+          <p class="ejemplo-subtitulo">Comunidad</p>
+        </div>
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-titulocard</code>
+            <span>28px · Títulos de tarjetas</span>
+          </div>
+          <p class="ejemplo-card">Historias que transforman</p>
+        </div>
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-cta</code>
+            <span>28px · Botón principal</span>
+          </div>
+          <p class="ejemplo-cta">¡Adoptá!</p>
+        </div>
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-parrafo</code>
+            <span>20px · Cuerpo de texto</span>
+          </div>
+          <p class="ejemplo-parrafo">
+            Adoptar es mucho más que sumar una mascota: es regalarles
+            una vida llena de cuidado, respeto y segundas oportunidades.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ESPACIADOS -->
+
+      <div class="sistema-subseccion">
+        <h3>Escala de espaciados</h3>
+        <p>
+          Los valores establecen un ritmo visual constante entre
+          columnas, párrafos, componentes y secciones.
+        </p>
+      </div>
+
+      <div class="sistema-lista-tokens">
+
+        <div class="fila-espacio">
+          <div class="fila-token__meta">
+            <code>--espaciado-columnas</code>
+            <span>8px · Separación entre columnas</span>
+          </div>
+          <div class="barra-espacio barra-espacio--columnas"></div>
+        </div>
+
+        <div class="fila-espacio">
+          <div class="fila-token__meta">
+            <code>--espaciado-parrafos</code>
+            <span>16px · Separación entre textos</span>
+          </div>
+          <div class="barra-espacio barra-espacio--parrafos"></div>
+        </div>
+
+        <div class="fila-espacio">
+          <div class="fila-token__meta">
+            <code>--espaciado-paddingcomponentes</code>
+            <span>18px · Espaciado interno</span>
+          </div>
+          <div class="barra-espacio barra-espacio--padding"></div>
+        </div>
+
+        <div class="fila-espacio">
+          <div class="fila-token__meta">
+            <code>--espaciado-componentes</code>
+            <span>26px · Separación entre componentes</span>
+          </div>
+          <div class="barra-espacio barra-espacio--componentes"></div>
+        </div>
+
+        <div class="fila-espacio">
+          <div class="fila-token__meta">
+            <code>--espaciado-secciones</code>
+            <span>34px · Separación entre secciones</span>
+          </div>
+          <div class="barra-espacio barra-espacio--secciones"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 4. INVENTARIO DE COMPONENTES -->
+
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-componentes">
+
+      <div class="sistema-bloque__cabecera">
+        <span class="sistema-numero">04 · ARQUITECTURA</span>
+        <h2 id="doc-componentes">Inventario de componentes</h2>
+        <p>
+          Los componentes se organizan según su nivel de complejidad:
+          átomos, moléculas y organismos.
+        </p>
+      </div>
+
+      <!-- ÁTOMOS -->
+
+      <div class="sistema-inventario">
+        <div class="sistema-inventario__cabecera">
+          <h3>Átomos</h3>
+          <p>
+            Elementos básicos e independientes que pueden combinarse
+            para construir componentes más complejos.
+          </p>
+        </div>
+
+        <div class="sistema-muestrario-atomos">
+
+          <div class="sistema-muestra">
+            <a href="#" class="header_item">Navegación</a>
+            <code>.header_item</code>
+          </div>
+
+          <div class="sistema-muestra">
+            <button type="button" class="btn-primario">¡Doná ahora!</button>
+            <code>.btn-primario</code>
+          </div>
+
+          <div class="sistema-muestra">
+            <button type="button" class="btn-secundario">Conocé más</button>
+            <code>.btn-secundario</code>
+          </div>
+
+          <div class="sistema-muestra">
+            <span class="etiqueta-caracteristica">Cariñoso</span>
+            <code>.etiqueta-caracteristica</code>
+          </div>
+
+          <div class="sistema-muestra">
+            <span class="etiqueta-edad">2 años</span>
+            <code>.etiqueta-edad</code>
+          </div>
+
+          <div class="sistema-muestra">
+            <a href="#" class="icono-redes">IG</a>
+            <code>.icono-redes</code>
+          </div>
+
+        </div>
+
+        <div class="sistema-lista-clases">
+          <span>.logo</span>
+          <span>.logo-colaboradores</span>
+          <span>.campo-form</span>
+          <span>.etiqueta-form</span>
+          <span>.img-pago</span>
+          <span>.img-mascotas</span>
+          <span>.img-card</span>
+        </div>
+      </div>
+
+      <!-- MOLÉCULAS -->
+
+      <div class="sistema-inventario">
+        <div class="sistema-inventario__cabecera">
+          <h3>Moléculas</h3>
+          <p>
+            Combinaciones de átomos que funcionan como una unidad
+            y cumplen una tarea específica dentro de la interfaz.
+          </p>
+        </div>
+
+        <div class="sistema-grilla-moleculas">
+
+          <article class="sistema-molecula">
+            <div class="sistema-demo-nav">
+              <span class="sistema-demo-logo">🐾 CG</span>
+              <span>Inicio</span>
+              <span>Adopciones</span>
+              <span>Contacto</span>
+            </div>
+            <code>.barra-navegacion</code>
+          </article>
+
+          <article class="sistema-molecula">
+            <div class="sistema-demo-form">
+              <label>Nombre</label>
+              <input type="text" placeholder="Tu nombre" disabled>
+            </div>
+            <code>.campo-form</code>
+          </article>
+
+          <article class="sistema-molecula">
+            <div class="sistema-demo-red">
+              <span class="icono-redes">IG</span>
+              <span>Seguinos en redes</span>
+            </div>
+            <code>.red-social</code>
+          </article>
+
+          <article class="sistema-molecula">
+            <div class="sistema-demo-card">
+              <span>🐶</span>
+              <strong>Animales en adopción</strong>
+              <p>Conocé a quienes buscan un hogar.</p>
+            </div>
+            <code>.card-animales</code>
+          </article>
+
+          <article class="sistema-molecula">
+            <div class="sistema-demo-card">
+              <span>💛</span>
+              <strong>Cómo ayudar</strong>
+              <p>Hay muchas formas de colaborar.</p>
+            </div>
+            <code>.card-ayuda</code>
+          </article>
+
+          <article class="sistema-molecula">
+            <div class="sistema-demo-card">
+              <span>ℹ️</span>
+              <strong>Información</strong>
+              <p>Contenido organizado y accesible.</p>
+            </div>
+            <code>.card-info</code>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ORGANISMOS -->
+
+      <div class="sistema-inventario">
+        <div class="sistema-inventario__cabecera">
+          <h3>Organismos</h3>
+          <p>
+            Composiciones de mayor complejidad que agrupan moléculas
+            y átomos para estructurar secciones completas del sitio.
+          </p>
+        </div>
+
+        <div class="sistema-grilla-organismos">
+
+          <article class="sistema-organismo">
+            <div class="sistema-organismo__visual sistema-organismo__header">
+              <span>🐾 CG</span>
+              <span>Navegación</span>
+              <span class="sistema-mini-boton">Donar</span>
+            </div>
+            <div class="sistema-organismo__datos">
+              <strong>.header</strong>
+              <p>Logo + barra de navegación + botón principal.</p>
+            </div>
+          </article>
+
+          <article class="sistema-organismo">
+            <div class="sistema-organismo__visual sistema-organismo__hero">
+              <strong>Ellos nos necesitan</strong>
+              <span>Texto + imagen + botón principal</span>
+            </div>
+            <div class="sistema-organismo__datos">
+              <strong>.hero</strong>
+              <p>Título + texto + imágenes + botón principal.</p>
+            </div>
+          </article>
+
+          <article class="sistema-organismo">
+            <div class="sistema-organismo__visual sistema-organismo__footer">
+              <span>Enlaces</span>
+              <span>Redes sociales</span>
+              <span>Logo</span>
+            </div>
+            <div class="sistema-organismo__datos">
+              <strong>.footer</strong>
+              <p>Enlaces importantes + logo + redes con enlaces.</p>
+            </div>
+          </article>
+
+          <article class="sistema-organismo">
+            <div class="sistema-organismo__visual sistema-organismo__cards">
+              <span>🤝</span>
+              <span>💛</span>
+              <span>🏡</span>
+            </div>
+            <div class="sistema-organismo__datos">
+              <strong>.cards-ayuda</strong>
+              <p>Tres tarjetas con iconos, títulos y textos sobre cómo ayudar.</p>
+            </div>
+          </article>
+
+          <article class="sistema-organismo">
+            <div class="sistema-organismo__visual sistema-organismo__cards">
+              <span>🐶</span>
+              <span>🐱</span>
+              <span>🐾</span>
+            </div>
+            <div class="sistema-organismo__datos">
+              <strong>.cards-adopciones</strong>
+              <p>Siete tarjetas con imágenes y textos de animales en adopción.</p>
+            </div>
+          </article>
+
+          <article class="sistema-organismo">
+            <div class="sistema-organismo__visual sistema-organismo__cards">
+              <span>❤️</span>
+              <span>🤝</span>
+              <span>🏠</span>
+            </div>
+            <div class="sistema-organismo__datos">
+              <strong>.cards-valores</strong>
+              <p>Cuatro tarjetas con iconos, títulos y textos sobre los valores de la organización.</p>
+            </div>
+          </article>
+
+          <article class="sistema-organismo">
+            <div class="sistema-organismo__visual sistema-organismo__ficha">
+              <span>🐕</span>
+              <span>Nombre · Edad · Características</span>
+              <span class="sistema-mini-boton">Adoptar</span>
+            </div>
+            <div class="sistema-organismo__datos">
+              <strong>.ficha-mascota</strong>
+              <p>Imagen + título + texto + etiquetas + botón principal.</p>
+            </div>
+          </article>
+
+          <article class="sistema-organismo">
+            <div class="sistema-organismo__visual sistema-organismo__cards">
+              <span>💳</span>
+              <span>💰</span>
+            </div>
+            <div class="sistema-organismo__datos">
+              <strong>.card-pago</strong>
+              <p>Dos tarjetas con icono de aplicación, texto y recuadro.</p>
+            </div>
+          </article>
+
+          <article class="sistema-organismo">
+            <div class="sistema-organismo__visual sistema-organismo__cards">
+              <span>💛</span>
+              <span>🙌</span>
+            </div>
+            <div class="sistema-organismo__datos">
+              <strong>.card-colaboracion</strong>
+              <p>Dos tarjetas con título, texto y botón principal.</p>
+            </div>
+          </article>
+
+          <article class="sistema-organismo">
+            <div class="sistema-organismo__visual sistema-organismo__form">
+              <span>Nombre</span>
+              <span>Correo electrónico</span>
+              <span class="sistema-mini-boton">Enviar</span>
+            </div>
+            <div class="sistema-organismo__datos">
+              <strong>.form-contacto</strong>
+              <p>Etiquetas + campos de entrada + botón principal.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 5. DECISIONES TÉCNICAS -->
+
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-tecnico">
+
+      <div class="sistema-bloque__cabecera">
+        <span class="sistema-numero">05 · IMPLEMENTACIÓN</span>
+        <h2 id="doc-tecnico">Decisiones técnicas</h2>
+      </div>
+
+      <div class="sistema-texto sistema-decisiones">
+
+        <h3>Grilla principal</h3>
+        <p>
+          La estructura general del sitio utiliza CSS Grid con una
+          organización de 4 columnas para mobile, 8 para tablet y
+          12 para desktop. Esta estructura permite distribuir los
+          contenidos de manera flexible según el espacio disponible.
+          Las dimensiones de referencia utilizadas para documentar
+          cada formato son 412 × 917 px, 834 × 1194 px y 1512 × 982 px.
+        </p>
+
+        <h3>Container Queries</h3>
+        <p>
+          Se incorporaron Container Queries en componentes como
+          <code>.card-valor</code> y <code>.card-ayuda</code>, para
+          modificar su disposición según el ancho de su propio
+          contenedor y no solamente según el tamaño de la pantalla.
+          De esta manera, pueden pasar de una organización vertical
+          a una horizontal cuando cuentan con espacio suficiente.
+          También se utilizan consultas de contenedor en tarjetas
+          de animales, historias y eventos.
+        </p>
+
+        <h3>Desafío de implementación</h3>
+        <p>
+          Uno de los principales desafíos técnicos del sistema es
+          mantener una misma identidad visual y una distribución
+          clara de los contenidos en diferentes tamaños de pantalla.
+          Para resolverlo, se trabajó con variables reutilizables,
+          componentes organizados por niveles y reglas responsivas,
+          evitando repetir estilos y permitiendo adaptar cada
+          elemento al espacio disponible.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- GRILLA RESPONSIVA -->
+
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-grid">
+
+      <div class="sistema-bloque__cabecera">
+        <span class="sistema-numero">06 · ESTRUCTURA</span>
+        <h2 id="doc-grid">Grilla responsiva</h2>
+        <p>
+          La estructura macro utiliza CSS Grid y adapta la cantidad
+          de columnas según el formato de pantalla.
+        </p>
+      </div>
+
+      <div class="sistema-grilla-formatos">
+
+        <article class="sistema-formato">
+          <div class="sistema-formato__datos">
+            <h3>Mobile</h3>
+            <strong>4 columnas</strong>
+            <span>412 × 917 px</span>
+          </div>
+          <div class="demo-grilla-visual demo-grilla-mobile">
+            <span>1</span><span>2</span><span>3</span><span>4</span>
+          </div>
+        </article>
+
+        <article class="sistema-formato">
+          <div class="sistema-formato__datos">
+            <h3>Tablet</h3>
+            <strong>8 columnas</strong>
+            <span>834 × 1194 px</span>
+          </div>
+          <div class="demo-grilla-visual demo-grilla-tablet">
+            <span>1</span><span>2</span><span>3</span><span>4</span>
+            <span>5</span><span>6</span><span>7</span><span>8</span>
+          </div>
+        </article>
+
+        <article class="sistema-formato">
+          <div class="sistema-formato__datos">
+            <h3>Desktop</h3>
+            <strong>12 columnas</strong>
+            <span>1512 × 982 px</span>
+          </div>
+          <div class="demo-grilla-visual demo-grilla-desktop">
+            <span>1</span><span>2</span><span>3</span><span>4</span>
+            <span>5</span><span>6</span><span>7</span><span>8</span>
+            <span>9</span><span>10</span><span>11</span><span>12</span>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+
+      <nav class="footer__enlaces" aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="contacto.html">Contactanos</a></li>
+          <li><a href="como-ayudar.html">Colaborar</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="agenda.html">Agenda Gonnet</a></li>
+          <li><a href="sistema.html">Sistema de Diseño</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__redes">
+        <p>¡Seguinos en redes sociales!</p>
+        <div class="footer__iconos">
+          <a href="https://instagram.com" target="_blank" rel="noopener"
+             class="icono-redes" aria-label="Instagram">IG</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener"
+             class="icono-redes" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

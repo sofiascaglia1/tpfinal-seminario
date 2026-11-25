@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopciones | Callejeritos Gonnet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       ORGANISMO: .header
+       ========================================================= -->
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="index.html" class="logo" aria-label="Inicio Callejeritos Gonnet">
+     <img src="assets/Logo.png" alt="Logo Callejeritos Gonnet" class="logo__svg">
+      </a>
+
+      <nav class="barra-navegacion" aria-label="Navegación principal">
+        <ul class="barra-navegacion__lista">
+          <li><a href="quienes-somos.html" class="header_item">¿Quiénes somos?</a></li>
+          <li><a href="adopciones.html" class="header_item header_item--activo" aria-current="page">Adopciones</a></li>
+          <li><a href="como-ayudar.html" class="header_item">Cómo ayudar</a></li>
+          <li><a href="agenda.html" class="header_item">Agenda</a></li>
+          <li><a href="contacto.html" class="header_item">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="como-ayudar.html#donar" class="btn-primario">¡Doná ahora!</a>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       CONTENIDO PRINCIPAL (CSS GRID - 4 / 8 / 12 COLUMNAS)
+       ========================================================= -->
+  <main class="layout-principal">
+
+    <!-- BLOQUE 1: CARRUSEL DE CALLEJERITOS EN ADOPCIÓN -->
+    <section class="seccion-grid adopciones" aria-labelledby="titulo-adopciones">
+      <header class="adopciones__encabezado">
+        <h1 id="titulo-adopciones">Conocé a algunos de los callejeritos en adopción</h1>
+      </header>
+
+      <div class="carrusel-adopciones" role="region" aria-label="Carrusel de mascotas en adopción">
+        <div class="cards-adopciones">
+
+          <div class="contenedor-card">
+            <a href="kity.html" class="card-animales">
+              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=500&q=80" alt="Kity en adopción" class="img-card">
+              <div class="card-animales__pie">
+                <h2>Kity</h2>
+              </div>
+            </a>
+          </div>
+
+          <div class="contenedor-card">
+            <a href="kity.html" class="card-animales">
+              <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=500&q=80" alt="Bella en adopción" class="img-card">
+              <div class="card-animales__pie">
+                <h2>Bella</h2>
+              </div>
+            </a>
+          </div>
+
+          <div class="contenedor-card">
+            <a href="kity.html" class="card-animales">
+              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80" alt="Rhodesia en adopción" class="img-card">
+              <div class="card-animales__pie">
+                <h2>Rhodesia</h2>
+              </div>
+            </a>
+          </div>
+
+          <div class="contenedor-card">
+            <a href="kity.html" class="card-animales">
+              <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=500&q=80" alt="Tony en adopción" class="img-card">
+              <div class="card-animales__pie">
+                <h2>Tony</h2>
+              </div>
+            </a>
+          </div>
+
+          <div class="contenedor-card">
+            <a href="kity.html" class="card-animales">
+              <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=500&q=80" alt="Ella en adopción" class="img-card">
+              <div class="card-animales__pie">
+                <h2>Ella</h2>
+              </div>
+            </a>
+          </div>
+
+          <div class="contenedor-card">
+            <a href="kity.html" class="card-animales">
+              <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?auto=format&fit=crop&w=500&q=80" alt="Milo en adopción" class="img-card">
+              <div class="card-animales__pie">
+                <h2>Milo</h2>
+              </div>
+            </a>
+          </div>
+
+          <div class="contenedor-card">
+            <a href="kity.html" class="card-animales">
+              <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&w=500&q=80" alt="Rocco en adopción" class="img-card">
+              <div class="card-animales__pie">
+                <h2>Rocco</h2>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 2: ¿POR QUÉ ADOPTAR EN VEZ DE COMPRAR? -->
+    <section class="seccion-grid concientizacion-adopcion seccion-adopcion" aria-labelledby="titulo-porque-adoptar">
+      <div class="concientizacion-adopcion__contenido">
+        <h2 id="titulo-porque-adoptar">¿Por qué adoptar en vez de comprar?</h2>
+        <p>Cuando adoptás, le das una segunda oportunidad a un animal lleno de amor. En <strong>Callejeritos Gonnet</strong>, cada perrito se recupera en un hogar de tránsito hasta estar listo para conocer a su familia definitiva.</p>
+        <p>Adoptar es salvar una vida y liberar un lugar en nuestra red para poder sacar a otro perrito de la calle. Es un acto de amor, responsabilidad y compromiso que cambia su historia para siempre.</p>
+      </div>
+    </section>
+
+    <!-- BLOQUE 3: HISTORIAS REALES (1 SOLA FOTO POR HISTORIA Y SIN ETIQUETAS) -->
+    <section class="seccion-grid historias-reales" aria-labelledby="titulo-historias">
+      <header class="historias-reales__encabezado">
+        <h2 id="titulo-historias">Historias reales</h2>
+      </header>
+
+      <div class="historias-reales__grilla">
+        <!-- Historia 1 -->
+        <div class="contenedor-card">
+          <article class="card-historia">
+            <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&w=600&q=80" alt="Toby recuperado con su familia adoptiva" class="card-historia__imagen">
+            <div class="card-historia__contenido">
+              <h3>Toby encontró su hogar</h3>
+              <p>Rescatado en situación de abandono con desnutrición severa. Tras tres meses de tratamiento veterinario, alimento medicado y cuidados en tránsito, hoy disfruta de una familia responsable en Gonnet.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Historia 2 -->
+        <div class="contenedor-card">
+          <article class="card-historia">
+            <img src="https://images.unsplash.com/photo-1513245543132-31f507417b26?auto=format&fit=crop&w=600&q=80" alt="Nala feliz en su nuevo hogar" class="card-historia__imagen">
+            <div class="card-historia__contenido">
+              <h3>Nala volvió a jugar</h3>
+              <p>Ingresó tras sufrir un accidente en la vía pública. Con lo recaudado mediante donaciones solidarias y Gallejeritas veganas pudimos cubrir su cirugía y rehabilitación completa hasta su adopción definitiva.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Historia 3 -->
+        <div class="contenedor-card">
+          <article class="card-historia">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=600&q=80" alt="Simón con su familia adoptiva" class="card-historia__imagen">
+            <div class="card-historia__contenido">
+              <h3>La nueva vida de Simón</h3>
+              <p>Fue encontrado junto a sus hermanos sin refugio. Gracias a los hogares de tránsito temporales recibió todas sus vacunas y desparasitaciones, y hoy crece sano acompañado de mucho amor.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 4: CIERRE ILUSTRADO ("Ayudanos a seguir salvando vidas") -->
+    <section class="seccion-ilustrada" aria-labelledby="titulo-salvar-vidas">
+      <div class="seccion-grid seccion-ilustrada__grilla">
+       
+
+        <div class="seccion-ilustrada__contenido">
+          <h2 id="titulo-salvar-vidas">Ayudanos a seguir salvando vidas</h2>
+          <p><strong>Cada colaboración cuenta</strong> para darles un nuevo <br> comienzo a los callejeritos que más lo necesitan. <br> <strong>Tu ayuda es fundamental</strong> para que sigamos <br> dándoles segundas oportunidades. Juntos, podemos demostrar <br> que <strong class="texto-remarcado">el amor lo cambia todo.</strong></p>
+          <a href="como-ayudar.html" class="btn-primario">Colaborá ahora</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       ORGANISMO: .footer
+       ========================================================= -->
+  <footer class="footer">
+    <div class="footer__contenedor">
+      <nav class="footer__enlaces" aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="contacto.html">Contactanos</a></li>
+          <li><a href="como-ayudar.html">Colaborar</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="agenda.html">Agenda Gonnet</a></li>
+          <li><a href="sistema.html">Sistema de Diseño</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__redes">
+        <p>¡Seguinos en redes sociales!</p>
+        <div class="footer__iconos">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Instagram">IG</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

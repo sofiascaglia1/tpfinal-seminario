@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda | Callejeritos Gonnet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="index.html" class="logo" aria-label="Inicio Callejeritos Gonnet">
+     <img src="assets/Logo.png" alt="Logo Callejeritos Gonnet" class="logo__svg">
+      </a>
+
+      <nav class="barra-navegacion" aria-label="Navegación principal">
+        <ul class="barra-navegacion__lista">
+          <li><a href="quienes-somos.html" class="header_item">¿Quiénes somos?</a></li>
+          <li><a href="adopciones.html" class="header_item">Adopciones</a></li>
+          <li><a href="como-ayudar.html" class="header_item">Cómo ayudar</a></li>
+          <li><a href="agenda.html" class="header_item header_item--activo" aria-current="page">Agenda</a></li>
+          <li><a href="contacto.html" class="header_item">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="como-ayudar.html#donar" class="btn-primario">¡Doná ahora!</a>
+    </div>
+  </header>
+
+  <main class="layout-principal">
+    <section class="seccion-grid agenda">
+      <header class="agenda__encabezado">
+        <h1>Agenda solidaria y jornadas de salud</h1>
+        <p>Participá de los eventos realizados por Callejeritos Gonnet y acercate a las campañas de salud promulgadas por el municipio de Gonnet.</p>
+      </header>
+
+      <div class="agenda__grilla">
+        <!-- Evento 1: Organización -->
+        <div class="contenedor-card">
+          <article class="card-evento">
+            <div class="card-evento__fecha">
+              <span class="card-evento__dia">06</span>
+              <span class="card-evento__mes">DIC</span>
+            </div>
+            <div class="card-evento__cuerpo">
+              <span class="etiqueta-caracteristica">Evento Callejeritos</span>
+              <h2>Feria Solidaria y Desfile de Callejeros</h2>
+              <p>Vení a conocer a nuestros rescatados en adopción, colaborá comprando Gallejeritas veganas y traé tus bolsas vacías para canjear por alimento.</p>
+              <p class="card-evento__lugar">Plaza de la Estación Gonnet (Calle 502 y 15) · 14:00 a 18:00 hs</p>
+              <a href="contacto.html" class="btn-secundario">Quiero participar</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Evento 2: Municipio de Gonnet -->
+        <div class="contenedor-card">
+          <article class="card-evento">
+            <div class="card-evento__fecha card-evento__fecha--municipio">
+              <span class="card-evento__dia">12</span>
+              <span class="card-evento__mes">DIC</span>
+            </div>
+            <div class="card-evento__cuerpo">
+              <span class="etiqueta-edad">Jornada Municipal</span>
+              <h2>Vacunación Antirrábica y Desparasitación Gratuita</h2>
+              <p>Jornada de salud animal promulgada por la Delegación Municipal de Gonnet. Atención por orden de llegada con correa, collar o transportadora.</p>
+              <p class="card-evento__lugar">Centro Comunal Gonnet (495 e/ 15 bis y 16) · 09:00 a 13:00 hs</p>
+              <a href="contacto.html" class="btn-secundario">Consultar requisitos</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Evento 3: Municipio de Gonnet -->
+        <div class="contenedor-card">
+          <article class="card-evento">
+            <div class="card-evento__fecha card-evento__fecha--municipio">
+              <span class="card-evento__dia">19</span>
+              <span class="card-evento__mes">DIC</span>
+            </div>
+            <div class="card-evento__cuerpo">
+              <span class="etiqueta-edad">Jornada Municipal</span>
+              <h2>Operativo de Castración Gratuita en el Barrio</h2>
+              <p>Castraciones gratuitas para perros y gatos a partir de los 6 meses. Recordá llevar a tu mascota con 12 horas de ayuno sólido y manta de abrigo.</p>
+              <p class="card-evento__lugar"> Club Universitario de Gonnet · Turnos desde las 08:30 hs</p>
+              <a href="contacto.html" class="btn-secundario">Solicitar información</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Evento 4: Organización -->
+        <div class="contenedor-card">
+          <article class="card-evento">
+            <div class="card-evento__fecha">
+              <span class="card-evento__dia">22</span>
+              <span class="card-evento__mes">DIC</span>
+            </div>
+            <div class="card-evento__cuerpo">
+              <span class="etiqueta-caracteristica">Colecta Navideña</span>
+              <h2>Colecta de Insumos y Alimento Balanceado</h2>
+              <p>Punto de recepción comunitario de medicamentos, pañales XL, mantas y alimento medicado para sostener los tránsitos durante el verano.</p>
+              <p class="card-evento__lugar"> Somos tu Pet Shop (Camino Centenario y 501) · 10:00 a 19:00 hs</p>
+              <a href="como-ayudar.html" class="btn-secundario">Ver lista de insumos</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+      <nav class="footer__enlaces" aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="contacto.html">Contactanos</a></li>
+          <li><a href="como-ayudar.html">Colaborar</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="agenda.html">Agenda Gonnet</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__redes">
+        <p>¡Seguinos en redes sociales!</p>
+        <div class="footer__iconos">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Instagram">IG</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
