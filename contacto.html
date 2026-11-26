@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Callejeritos Gonnet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+    <div class="header__contenedor">
+      <a href="index.html" class="logo" aria-label="Inicio Callejeritos Gonnet">
+     <img src="assets/Logo.png" alt="Logo Callejeritos Gonnet" class="logo__svg">
+      </a>
+
+
+      <nav class="barra-navegacion" aria-label="Navegación principal">
+        <ul class="barra-navegacion__lista">
+          <li><a href="quienes-somos.html" class="header_item">¿Quiénes somos?</a></li>
+          <li><a href="adopciones.html" class="header_item">Adopciones</a></li>
+          <li><a href="como-ayudar.html" class="header_item">Cómo ayudar</a></li>
+          <li><a href="agenda.html" class="header_item">Agenda</a></li>
+          <li><a href="contacto.html" class="header_item header_item--activo" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="como-ayudar.html#donar" class="btn-primario">¡Doná ahora!</a>
+    </div>
+  </header>
+
+  <main class="layout-principal">
+    <section class="seccion-grid contacto">
+      <div class="contacto__info">
+        <h1>Ya colaboran con nosotros:</h1>
+        <div class="colaboradores-grid">
+  <img class="logo-colaboradores" src="assets/Pet.Colaborador.png" alt="Somos tu Pet Shop">
+
+  <img class="logo-colaboradores" src="assets/Galle.Colaborador.png" alt="Gallejeritas Veganas">
+</div>
+
+        <div class="red-social">
+          <h2>¡Seguinos en redes sociales!</h2>
+          <div class="red-social__enlaces">
+            <a href="https://www.instagram.com/callejeritos.gonnet/" target="_blank" rel="noopener" class="icono-redes" aria-label="Instagram">
+  <img src="assets/IG.png" alt="Instagram">
+</a>
+
+<a href="https://facebook.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Facebook">
+  <img src="assets/FB.png" alt="Facebook">
+  </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ORGANISMO: .form-contacto -->
+      <form class="form-contacto" action="#" method="post">
+        <h2>Escribinos tu consulta</h2>
+
+        <div class="campo-form">
+          <label for="nombre" class="etiqueta-form">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+        </div>
+
+        <div class="campo-form">
+          <label for="correo" class="etiqueta-form">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="ejemplo@gmail.com" required>
+        </div>
+
+        <div class="campo-form">
+          <label for="asunto" class="etiqueta-form">Asunto</label>
+          <select id="asunto" name="asunto" required>
+            <option value="" disabled selected>Seleccionar motivo</option>
+            <option value="adopcion">Quiero adoptar</option>
+            <option value="transito">Quiero ser hogar de tránsito</option>
+            <option value="donacion">Donación de insumos / medicamentos</option>
+            <option value="voluntariado">Quiero ser voluntario</option>
+            <option value="agenda">Consulta sobre eventos / jornadas</option>
+          </select>
+        </div>
+
+        <div class="campo-form">
+          <label for="mensaje" class="etiqueta-form">Tu mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribí tu mensaje acá..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-secundario"><strong>Enviar</strong></button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+      <nav class="footer__enlaces" aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="contacto.html">Contactanos</a></li>
+          <li><a href="como-ayudar.html">Colaborar</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="agenda.html">Agenda Gonnet</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__redes">
+          <p>¡Seguinos en redes sociales!</p>
+        <div class="footer__iconos">
+          <a href="https://www.instagram.com/callejeritos.gonnet/" target="_blank" rel="noopener" class="icono-redes" aria-label="Instagram">
+  <img src="assets/Instagram.png" alt="Instagram">
+</a>
+
+<a href="https://facebook.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Facebook">
+  <img src="assets/Facebook.png" alt="Facebook">
+</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

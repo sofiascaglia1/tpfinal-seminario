@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo ayudar | Callejeritos Gonnet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       ORGANISMO: .header
+       ========================================================= -->
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="index.html" class="logo" aria-label="Inicio Callejeritos Gonnet">
+        <img src="assets/Logo.png" alt="Logo Callejeritos Gonnet" class="logo__svg">
+      </a>
+
+      <nav class="barra-navegacion" aria-label="Navegación principal">
+        <ul class="barra-navegacion__lista">
+          <li><a href="quienes-somos.html" class="header_item">¿Quiénes somos?</a></li>
+          <li><a href="adopciones.html" class="header_item">Adopciones</a></li>
+          <li><a href="como-ayudar.html" class="header_item header_item--activo" aria-current="page">Cómo ayudar</a></li>
+          <li><a href="agenda.html" class="header_item">Agenda</a></li>
+          <li><a href="contacto.html" class="header_item">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="#donar" class="btn-primario">¡Doná ahora!</a>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       CONTENIDO PRINCIPAL (CSS GRID - 4 / 8 / 12 COLUMNAS)
+       ========================================================= -->
+  <main class="layout-principal">
+
+    <!-- BLOQUE 1: BANNER VOLUNTARIADO -->
+    <section class="seccion-grid como-ayudar" aria-labelledby="titulo-voluntario">
+      <div class="banner-voluntariado">
+        <div class="banner-voluntariado__texto">
+          <h1 id="titulo-voluntario">¡Podés ser voluntario!</h1>
+          <p>Ser voluntario en <strong>Callejeritos Gonnet</strong> es sumarte a una <br>comunidad comprometida con las segundas oportunidades. <br>Vas a poder aprender cosas nuevas, conocer gente apasionada <br>por los animales y compartir momentos inolvidables <br>ayudando a nuestros rescatados.</p>
+          <a href="contacto.html" class="btn-primario">Sumarme al equipo</a>
+        </div>
+        <div class="banner-voluntariado__icono" aria-hidden="true">
+          <img src="assets/comoayudo.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 2: OTRAS FORMAS DE COLABORACIÓN (FONDO ILUSTRADO ANCHO COMPLETO) -->
+    <section class="seccion-formas-ayuda" aria-labelledby="titulo-formas-ayuda">
+      <div class="seccion-grid">
+        <div class="bloque-formas-ayuda">
+          <h2 id="titulo-formas-ayuda" class="titulo-centrado">Otras formas de colaboración</h2>
+          <div class="cards-ayuda">
+
+            <div class="contenedor-card">
+              <article class="card-ayuda">
+                <span class="card-ayuda__icono" aria-hidden="true">
+                  <img src="assets/donaciones.png" alt="">
+                </span>
+                <div class="card-ayuda__contenido">
+                  <h3>Donaciones</h3>
+                  <p>Con tu aporte económico <br>nos ayudás a cubrir <br>gastos veterinarios, <br>medicación y cuidados diarios.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="contenedor-card">
+              <article class="card-ayuda">
+                <span class="card-ayuda__icono" aria-hidden="true">
+                  <img src="assets/envases.png" alt="">
+                </span>
+                <div class="card-ayuda__contenido">
+                  <h3>Canje de envases</h3>
+                  <p>Llevá tus bolsas vacías <br>de Old Prince o Kongo a <br>Somos tu Pet Shop: <br>se reciclan y las canjeamos <br>por alimento balanceado.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="contenedor-card">
+              <article class="card-ayuda">
+                <span class="card-ayuda__icono" aria-hidden="true">
+                  <img src="assets/galletita.png" alt="">
+                </span>
+                <div class="card-ayuda__contenido">
+                  <h3>Gallejeritas</h3>
+                  <p>Comprá nuestras galletitas <br>veganas solidarias; todo <br>lo recaudado se destina a <br>alimento, veterinaria y <br>cuidado de los rescatados.</p>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 3: MEDIOS DE PAGO E INSUMOS -->
+    <section class="seccion-grid" aria-label="Medios de donación e insumos">
+      <!-- ORGANISMO: .cards-pago -->
+      <div id="donar" class="cards-pago">
+        <article class="card-pago">
+          <div class="img-pago-mp">
+            <img src="assets/mercadopago.png" alt="Mercado Pago">
+          </div>
+          <p>Alias solidario: <strong>callejeritos.gonnet</strong></p>
+          <a href="contacto.html" class="btn-secundario">Informar transferencia</a>
+        </article>
+
+        <article class="card-pago">
+          <div class="img-pago-pp">
+            <img src="assets/paypal.png" alt="PayPal">
+          </div>
+          <p>Alias internacional: <strong>callejeritos.gonnet</strong></p>
+          <a href="contacto.html" class="btn-secundario">Donar desde el exterior</a>
+        </article>
+      </div>
+
+      <!-- ORGANISMO: .cards-colaboracion -->
+      <div class="cards-colaboracion">
+        <article class="card-info">
+          <h2>Doná medicamentos</h2>
+          <p>Estos son los medicamentos e insumos que más necesitamos:</p>
+          <p>Amoxicilina Clavulánico comprimidos de 250, 500, 750 o 1 gr, y también inyectable. Cefalexina comprimidos por 250, 500 o 1 gr. Ceftriaxona inyectable. Toltrazol, Desparasitantes (Total full, Meltra plus, Novasol, Albendazol), Metronidazol, Enrofloxacina, Contal, Ivermectina, Vincristina, Clindamicina, Poulferon o Inmunogam, Ecthol ambiental, Amitraz, Artrin o Geriox, Vendas tipo cambridge, Telas adhesivas de al menos 2 cm de ancho.</p>
+          <a href="contacto.html" class="btn-primario">¡Doná ahora!</a>
+        </article>
+
+        <article class="card-info">
+          <h2>Doná insumos</h2>
+          <ul class="lista-insumos">
+            <li>Alimento medicado: Renal, Urinary y Hepático</li>
+            <li>Pañales XL sin elástico / zaleas</li>
+            <li>Mantas, frazadas y sábanas, toallas</li>
+            <li>Camitas o colchonetas, alfombras de goma o tapetes lavables</li>
+            <li>Cepillos, peines y cortaúñas</li>
+            <li>Paños descartables o trapos de piso</li>
+            <li>Guantes de limpieza, escobas, palas y bolsas de consorcio</li>
+            <li>Lavandina, detergente y desinfectantes no tóxicos</li>
+            <li>Alcohol, gasas, vendas y guantes descartables</li>
+            <li>Platos de acero o plástico duro y juguetes resistentes</li>
+          </ul>
+          <a href="contacto.html" class="btn-primario">¡Doná ahora!</a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       ORGANISMO: .footer
+       ========================================================= -->
+  <footer class="footer">
+    <div class="footer__contenedor">
+      <nav class="footer__enlaces" aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="contacto.html">Contactanos</a></li>
+          <li><a href="como-ayudar.html">Colaborar</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="agenda.html">Agenda Gonnet</a></li>
+          <li><a href="sistema.html">Sistema de Diseño</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__redes">
+        <p>¡Seguinos en redes sociales!</p>
+        <div class="footer__iconos">
+          <a href="https://www.instagram.com/callejeritos.gonnet/" target="_blank" rel="noopener" class="icono-redes" aria-label="Instagram">
+            <img src="assets/Instagram.png" alt="Instagram">
+          </a>
+
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Facebook">
+            <img src="assets/Facebook.png" alt="Facebook">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

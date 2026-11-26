@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Quiénes somos? | Callejeritos Gonnet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       ORGANISMO: .header
+       ========================================================= -->
+ <header class="header">
+    <div class="header__contenedor">
+      <a href="index.html" class="logo" aria-label="Inicio Callejeritos Gonnet">
+     <img src="assets/Logo.png" alt="Logo Callejeritos Gonnet" class="logo__svg">
+      </a>
+
+
+      <nav class="barra-navegacion" aria-label="Navegación principal">
+        <ul class="barra-navegacion__lista">
+          <li><a href="quienes-somos.html" class="header_item header_item--activo" aria-current="page">¿Quiénes somos?</a></li>
+          <li><a href="adopciones.html" class="header_item">Adopciones</a></li>
+          <li><a href="como-ayudar.html" class="header_item">Cómo ayudar</a></li>
+          <li><a href="agenda.html" class="header_item">Agenda</a></li>
+          <li><a href="contacto.html" class="header_item">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="como-ayudar.html#donar" class="btn-primario">¡Doná ahora!</a>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       CONTENIDO PRINCIPAL (CSS GRID - 4 / 8 / 12 COLUMNAS)
+       ========================================================= -->
+  <main class="layout-principal">
+
+    <!-- BLOQUE 1: HERO DE QUIÉNES SOMOS + INDICADORES DE GALERÍA -->
+    <section class="seccion-grid quienes-somos">
+      <div class="quienes-somos__intro">
+        <h1>Amor, compromiso y trabajo en equipo</h1>
+        <p><strong>Callejeritos Gonnet</strong> es un proyecto solidario y sin fines de lucro nacido en nuestra comunidad con la misión de <strong>rescatar</strong> animales en situación de calle, <strong>acompañarlos</strong> en su recuperación y darles la oportunidad de encontrar una <strong>familia responsable</strong>.</p>
+        <p>Con el <strong>apoyo de los vecinos</strong>, trabajamos incansablemente para concientizar sobre el cuidado animal y demostrar que todos merecen un hogar lleno de amor.</p>
+      </div>
+
+   <div class="quienes-somos__imagen">
+  <figure class="galeria-quienes">
+
+    <div class="galeria-quienes__contenedor">
+      <img
+        src="assets/ftcarrusel2.png"
+        alt="Perros rescatados"
+        class="galeria-quienes__foto galeria-quienes__foto--activa"
+      >
+
+      <img
+        src="assets/ftcarrusel3.png"
+        alt="Perro esperando una familia"
+        class="galeria-quienes__foto"
+      >
+        <img
+              src="assets/ftcarrusel.png"
+              alt="Perro rescatado"
+              class="galeria-quienes__foto"
+            >
+
+      <img
+        src="assets/ftcarrusel4.png"
+        alt="Perro rescatado"
+        class="galeria-quienes__foto"
+      >
+
+      <button class="galeria-quienes__flecha galeria-quienes__anterior" aria-label="Imagen anterior">&#10094;</button>
+      <button class="galeria-quienes__flecha galeria-quienes__siguiente" aria-label="Imagen siguiente">&#10095;</button>
+    </div>
+
+    <figcaption class="galeria-quienes__puntos">
+      <span class="punto-galeria punto-galeria--activo"></span>
+      <span class="punto-galeria"></span>
+      <span class="punto-galeria"></span>
+      <span class="punto-galeria"></span>
+    </figcaption>
+
+  </figure>
+</div>
+    </section>
+
+    <!-- BLOQUE 2: MÉTRICAS DE IMPACTO + HISTORIA Y LÍNEA DE TIEMPO (ADAPTADO A PALETA PDF) -->
+    <section class="seccion-grid bloque-impacto" aria-labelledby="titulo-trayectoria">
+      <!-- Fila superior de 4 métricas -->
+      <div class="metricas-superiores">
+        <article class="metrica-item">
+          <p class="metrica-item__numero">8</p>
+          <p class="metrica-item__etiqueta">Años de trayectoria</p>
+        </article>
+        <article class="metrica-item">
+          <p class="metrica-item__numero">+320</p>
+          <p class="metrica-item__etiqueta">Perros adoptados</p>
+        </article>
+        <article class="metrica-item">
+          <p class="metrica-item__numero">+180</p>
+          <p class="metrica-item__etiqueta">Gatos adoptados</p>
+        </article>
+        <article class="metrica-item">
+          <p class="metrica-item__numero">15</p>
+          <p class="metrica-item__etiqueta">Ingresos por mes</p>
+        </article>
+      </div>
+
+      <!-- Tarjeta principal de trayectoria y línea de tiempo -->
+      <div class="panel-historia">
+        <div class="panel-historia__superior">
+          <div class="panel-historia__texto">
+        
+            <h2 id="titulo-trayectoria">Rescatando juntos. <span class="panel-historia__destaque">Sin parar.</span></h2>
+            <p>Empezamos en <strong>Gonnet</strong> y crecimos gracias a una red solidaria de vecinos. Sin refugio propio, trabajamos con hogares de tránsito, voluntarios y veterinarias de la zona que creen en lo mismo que nosotros.</p>
+          </div>
+
+          <div class="panel-historia__datos">
+            <article class="dato-destacado">
+              <span class="dato-destacado__cifra">+500</span>
+              <p>Mascotas que encontraron su familia para siempre</p>
+            </article>
+            <article class="dato-destacado">
+              <span class="dato-destacado__cifra">$0</span>
+              <p>Cobramos por cada adopción. Siempre fue así, siempre lo será</p>
+            </article>
+            <article class="dato-destacado">
+              <span class="dato-destacado__cifra">100%</span>
+              <p>Voluntario. Nadie cobra un sueldo por hacer esto</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Línea de tiempo de 5 hitos -->
+        <div class="linea-tiempo">
+          <p class="linea-tiempo__titulo"> NUESTRA HISTORIA EN GONNET</p>
+          <ol class="linea-tiempo__lista">
+            <li class="hito-tiempo">
+              <span class="hito-tiempo__punto"></span>
+              <h3>2018</h3>
+              <p>Primeros rescates vecinales en Gonnet</p>
+            </li>
+            <li class="hito-tiempo">
+              <span class="hito-tiempo__punto"></span>
+              <h3>Red de tránsito</h3>
+              <p>Modelo solidario sin refugio propio</p>
+            </li>
+            <li class="hito-tiempo">
+              <span class="hito-tiempo__punto"></span>
+              <h3>Alianzas locales</h3>
+              <p>Canje de bolsas y Gallejeritas veganas</p>
+            </li>
+            <li class="hito-tiempo">
+              <span class="hito-tiempo__punto"></span>
+              <h3>Jornadas de salud</h3>
+              <p>Castraciones y vacunación junto al barrio</p>
+            </li>
+            <li class="hito-tiempo hito-tiempo--actual">
+              <span class="hito-tiempo__punto"></span>
+              <h3>Hoy — 2026</h3>
+              <p>Red activa en Gonnet y alrededores</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 3: NUESTROS VALORES (FONDO NARANJA + 4 CARDS) -->
+    <section class="seccion-valores" aria-labelledby="titulo-valores">
+      <div class="seccion-grid seccion-valores__contenedor">
+        <h2 id="titulo-valores" class="titulo-centrado seccion-valores__titulo">Nuestros valores</h2>
+
+        <div class="cards-valores">
+          <div class="contenedor-card">
+            <article class="card-valor">
+              <span class="card-valor__icono" aria-hidden="true">
+                <img src="assets/vocacion.png" alt="">
+              </span>
+              <div class="card-valor__contenido">
+                <h3>Vocación</h3>
+                <p>Trabajamos de forma voluntaria y constante para rescatar, cuidar y acompañar a cada callejerito de Gonnet hasta su recuperación.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="contenedor-card">
+            <article class="card-valor">
+              <span class="card-valor__icono" aria-hidden="true">
+                <img src="assets/empatia.png" alt="">
+              </span>
+              <div class="card-valor__contenido">
+                <h3>Empatía</h3>
+                <p>Asistimos a perros y gatos por igual, sin importar su edad o condición física, brindándoles el cuidado especial que necesitan.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="contenedor-card">
+            <article class="card-valor">
+              <span class="card-valor__icono" aria-hidden="true">
+                   <img src="assets/comunidad.png" alt="">
+              </span>
+              <div class="card-valor__contenido">
+                <h3>Comunidad</h3>
+                <p>Nos sostenemos gracias a las donaciones y aportes solidarios de la comunidad, rindiendo cuenta de cada recurso utilizado.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="contenedor-card">
+            <article class="card-valor">
+              <span class="card-valor__icono" aria-hidden="true">
+                  <img src="assets/cuidado.png" alt="">
+              </span>
+              <div class="card-valor__contenido">
+                <h3>Cuidado</h3>
+                <p>Promovemos la tenencia responsable, las castraciones y el seguimiento cercano de cada adopción para garantizar hogares seguros.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CIERRE ILUSTRADO -->
+    <section class="seccion-ilustrada" aria-labelledby="titulo-salvar-vidas">
+      <div class="seccion-grid seccion-ilustrada__grilla">
+
+        <div class="seccion-ilustrada__contenido">
+          <h2 id="titulo-salvar-vidas">Ayudanos a seguir salvando vidas</h2>
+          <p><strong>Cada colaboración cuenta</strong> para darles un nuevo <br> comienzo a los callejeritos que más lo necesitan. <br> <strong>Tu ayuda es fundamental</strong> para que sigamos <br> dándoles segundas oportunidades. Juntos, podemos demostrar <br> que <strong class="texto-remarcado">el amor lo cambia todo.</strong></p>
+          <a href="como-ayudar.html" class="btn-primario">Colaborá ahora</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       ORGANISMO: .footer
+       ========================================================= -->
+  <footer class="footer">
+    <div class="footer__contenedor">
+      <nav class="footer__enlaces" aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="contacto.html">Contactanos</a></li>
+          <li><a href="como-ayudar.html">Colaborar</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="agenda.html">Agenda Gonnet</a></li>
+          <li><a href="sistema.html">Sistema de Diseño</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__redes">
+          <p>¡Seguinos en redes sociales!</p>
+        <div class="footer__iconos">
+          <a href="https://www.instagram.com/callejeritos.gonnet/" target="_blank" rel="noopener" class="icono-redes" aria-label="Instagram">
+  <img src="assets/Instagram.png" alt="Instagram">
+</a>
+
+<a href="https://facebook.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Facebook">
+  <img src="assets/Facebook.png" alt="Facebook">
+</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const fotos = document.querySelectorAll(".galeria-quienes__foto");
+    const puntos = document.querySelectorAll(".punto-galeria");
+    const anterior = document.querySelector(".galeria-quienes__anterior");
+    const siguiente = document.querySelector(".galeria-quienes__siguiente");
+
+    let indiceActual = 0;
+
+    function mostrarFoto(indice) {
+      fotos[indiceActual].classList.remove("galeria-quienes__foto--activa");
+      puntos[indiceActual].classList.remove("punto-galeria--activo");
+
+      indiceActual = (indice + fotos.length) % fotos.length;
+
+      fotos[indiceActual].classList.add("galeria-quienes__foto--activa");
+      puntos[indiceActual].classList.add("punto-galeria--activo");
+    }
+
+    anterior.addEventListener("click", () => {
+      mostrarFoto(indiceActual - 1);
+    });
+
+    siguiente.addEventListener("click", () => {
+      mostrarFoto(indiceActual + 1);
+    });
+  </script>
+</body>
+</html>

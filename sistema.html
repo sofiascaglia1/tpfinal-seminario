@@ -1,0 +1,867 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Diseño | Callejeritos Gonnet</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="index.html" class="logo" aria-label="Inicio Callejeritos Gonnet">
+     <img src="assets/Logo.png" alt="Logo Callejeritos Gonnet" class="logo__svg">
+      </a>
+
+      <nav class="barra-navegacion" aria-label="Navegación principal">
+        <ul class="barra-navegacion__lista">
+          <li><a href="quienes-somos.html" class="header_item">¿Quiénes somos?</a></li>
+          <li><a href="adopciones.html" class="header_item">Adopciones</a></li>
+          <li><a href="como-ayudar.html" class="header_item">Cómo ayudar</a></li>
+          <li><a href="agenda.html" class="header_item">Agenda</a></li>
+          <li><a href="contacto.html" class="header_item">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="como-ayudar.html#donar" class="btn-primario">¡Doná ahora!</a>
+    </div>
+  </header>
+
+  <main class="layout-principal sistema-pagina">
+
+    <!-- ENCABEZADO -->
+
+    <section class="seccion-grid sistema-encabezado">
+      <div class="sistema-encabezado__bloque">
+        <span class="etiqueta-caracteristica">Documentación</span>
+        <h1>Sistema de Diseño</h1>
+        <p>
+          Documentación de las decisiones visuales y técnicas que construyen
+          la identidad digital de Callejeritos Gonnet.
+        </p>
+      </div>
+    </section>
+
+    <!-- 1. SOBRE EL CASO -->
+
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-caso">
+
+      <div class="sistema-bloque__cabecera">
+        <span class="sistema-numero">01 · CONTEXTO</span>
+        <h2 id="doc-caso">Sobre el caso</h2>
+      </div>
+
+      <div class="sistema-texto">
+        <h3>Callejeritos Gonnet</h3>
+        <p>
+          Callejeritos Gonnet es una organización dedicada al rescate y
+          protección de animales en situación de calle, principalmente
+          perros y gatos. Su trabajo consiste en brindarles refugio,
+          alimentación, atención veterinaria y cuidados durante su
+          recuperación, para luego encontrarles familias responsables
+          que puedan ofrecerles un hogar.
+        </p>
+        <p>
+          El público está formado principalmente por vecinos de Gonnet
+          y localidades cercanas interesados en el bienestar animal.
+          Incluye personas adultas que desean adoptar perros y gatos,
+          colaborar mediante donaciones de dinero, alimentos,
+          medicamentos e insumos, ofrecer hogares de tránsito o
+          participar como voluntarias.
+        </p>
+        <p>
+          El sitio web tiene como objetivo recaudar fondos y recursos
+          para garantizar la continuidad de las tareas de rescate,
+          cuidado y recuperación. Busca facilitar las donaciones,
+          comunicar las necesidades de la organización y mostrar
+          el trabajo que realiza, generando conciencia, confianza
+          y compromiso en quienes lo visitan.
+        </p>
+      </div>
+
+      <div class="sistema-destacados">
+        <article class="sistema-destacado">
+          <span>01</span>
+          <h3>Organización</h3>
+          <p>Rescate y protección animal.</p>
+        </article>
+
+        <article class="sistema-destacado">
+          <span>02</span>
+          <h3>Público</h3>
+          <p>Vecinos, adoptantes y colaboradores.</p>
+        </article>
+
+        <article class="sistema-destacado">
+          <span>03</span>
+          <h3>Objetivo web</h3>
+          <p>Transformar visitas en colaboraciones concretas.</p>
+        </article>
+      </div>
+
+    </section>
+
+  <!-- 2. ANÁLISIS DE REFERENCIA -->
+
+    <section class="seccion-grid sistema-seccion sistema-deconstruccion" aria-labelledby="doc-referencia">
+      <div class="sistema-seccion__encabezado">
+        <span class="sistema-numero">02 · ANÁLISIS DE REFERENCIA</span>
+        <h2 id="doc-referencia">Deconstrucción: Atomic Design y Material Design</h2>
+    <p>
+      Síntesis del análisis realizado en la Etapa 1.2 sobre dos referentes
+      fundamentales del diseño de interfaces (la metodología <strong>Atomic Design</strong>
+      de Brad Frost y el sistema de diseño <strong>Material Design</strong> de Google)
+      para definir la arquitectura y las reglas visuales de Callejeritos Gonnet.
+    </p>
+
+      <div class="sistema-comparacion">
+        <article class="sistema-comparacion__bloque">
+          <h3>Atomic Design</h3>
+          <p><strong> En este caso aprendimos </strong> una metodología modular que descompone las interfaces desde sus unidades mínimas hasta pantallas completas, permitiendo pensar la web como un sistema reutilizable y no como páginas aisladas.</p>
+          <ul>
+            <li><strong>Átomos:</strong> etiquetas HTML básicas, botones, inputs y tokens visuales (colores, tipografías, espaciados).</li>
+            <li><strong>Moléculas:</strong> agrupaciones funcionales simples, como un campo de formulario o una tarjeta breve.</li>
+            <li><strong>Organismos:</strong> secciones complejas con identidad propia (header, hero, grillas de tarjetas, footer).</li>
+          </ul>
+        </article>
+
+        <article class="sistema-comparacion__bloque">
+          <h3>Material Design</h3>
+          <p><strong>En este caso aprendimos </strong> un sistema de diseño integral que demuestra cómo traducir principios visuales en reglas técnicas estrictas y documentadas para sostener coherencia, jerarquía y accesibilidad.</p>
+          <ul>
+            <li><strong>Tokens de diseño:</strong> centralización de color, escala tipográfica y ritmo espacial en variables globales.</li>
+            <li><strong>Jerarquía y contraste:</strong> diferenciación clara entre superficies, contenedores, textos y acciones principales (CTA).</li>
+            <li><strong>Gobernanza y estados:</strong> definición explícita de interacciones (hover, focus) y adaptación responsiva.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="sistema-limitaciones">
+        <h3>Aprendizajes críticos y limitaciones detectadas</h3>
+
+        <div class="sistema-limitacion">
+          <span>01</span>
+          <div>
+            <h4>Fronteras difusas entre niveles</h4>
+            <p>
+              Al deconstruir interfaces reales con Atomic Design, observamos que en componentes intermedios no siempre es taxativo el límite entre una molécula compleja y un organismo simple, por lo que requiere criterios propios del proyecto.
+            </p>
+          </div>
+        </div>
+
+        <div class="sistema-limitacion">
+          <span>02</span>
+          <div>
+            <h4>Necesidad de reglas de gobierno</h4>
+            <p>
+              Atomic Design organiza la estructura de los componentes, pero necesita complementarse con criterios de sistema (como en Material Design) que fijen cómo se usan, qué variables consumen y cómo se mantienen sin romper la consistencia.
+            </p>
+          </div>
+        </div>
+
+        <div class="sistema-limitacion">
+          <span>03</span>
+          <div>
+            <h4>Riesgo de rigidez visual</h4>
+            <p>
+              Adoptar un sistema externo de forma literal puede volver fría una interfaz solidaria; el aprendizaje clave fue tomar su rigor técnico (tokens, grilla y estados) pero adaptarlo a una estética cálida y cercana.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sistema-aplicacion">
+        <h3>Decisiones que influyeron en Callejeritos Gonnet</h3>
+        <p>
+          De <strong>Atomic Design</strong> adoptamos la clasificación en átomos, moléculas y organismos para construir componentes reutilizables en todas las secciones del sitio (botones, etiquetas de mascotas, cards y formularios). De <strong>Material Design</strong> incorporamos el uso estricto de <strong>Design Tokens</strong> en <code>:root</code> sin valores hardcodeados, una paleta semántica con acento turquesa exclusivo para llamadas a la acción, bordes redondeados y estados interactivos claros que guían al usuario hacia la adopción y la donación.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- 3. VARIABLES DEL SISTEMA -->
+
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-variables">
+
+      <div class="sistema-bloque__cabecera">
+        <span class="sistema-numero">03 · IDENTIDAD VISUAL</span>
+        <h2 id="doc-variables">Variables del sistema</h2>
+        <p>
+          Parametros visuales definidos en la Etapa 2.1 e implementados
+          mediante propiedades personalizadas de CSS.
+        </p>
+      </div>
+
+      <!-- PALETA CROMÁTICA -->
+
+      <div class="sistema-subseccion">
+        <h3>Paleta cromática</h3>
+        <p>
+          La selección busca equilibrar calidez emocional y dinamismo.
+          Los naranjas transmiten energía, cercanía y optimismo; el fondo
+          crema aporta suavidad y los acentos turquesas evocan confianza,
+          frescura y orientan la atención hacia las acciones principales.
+        </p>
+      </div>
+
+     <div class="sistema-paleta-grupos">
+
+        <!-- FILA 1: FONDO / PRINCIPAL / ACENTO -->
+        <div class="sistema-paleta-fila">
+
+          <!-- GRUPO: FONDO -->
+          <div class="grupo-color">
+            <h4 class="grupo-color__titulo">FONDO</h4>
+            <div class="grupo-color__items">
+              <article class="muestra-color">
+                <div class="muestra-color__swatch swatch--fondo">
+                  <strong class="muestra-color__hex texto-naranja">FFF1D6</strong>
+                  <code class="texto-naranja">--color-fondo;</code>
+                </div>
+                <p class="muestra-color__desc">Fondo principal a utilizar.</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- GRUPO: PRINCIPAL -->
+          <div class="grupo-color">
+            <h4 class="grupo-color__titulo">PRINCIPAL</h4>
+            <div class="grupo-color__items">
+              <article class="muestra-color">
+                <div class="muestra-color__swatch swatch--principal">
+                  <strong class="muestra-color__hex texto-blanco">FF9E3F</strong>
+                  <code class="texto-blanco">--color-principal;</code>
+                </div>
+                <p class="muestra-color__desc">Títulos, header y footer.</p>
+              </article>
+
+              <article class="muestra-color">
+                <div class="muestra-color__swatch swatch--principal-detalles">
+                  <strong class="muestra-color__hex texto-blanco">F78F0D</strong>
+                  <code class="texto-blanco">--color-principal-detalles;</code>
+                </div>
+                <p class="muestra-color__desc">Ilustraciones complementarias, palabras remarcadas.</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- GRUPO: ACENTO -->
+          <div class="grupo-color">
+            <h4 class="grupo-color__titulo">ACENTO</h4>
+            <div class="grupo-color__items">
+              <article class="muestra-color">
+                <div class="muestra-color__swatch swatch--acento">
+                  <strong class="muestra-color__hex texto-blanco">01BFB3</strong>
+                  <code class="texto-blanco">--color-acento;</code>
+                </div>
+                <p class="muestra-color__desc">Botones principales de CTA, ilustraciones.</p>
+              </article>
+
+              <article class="muestra-color">
+                <div class="muestra-color__swatch swatch--acento-hover">
+                  <strong class="muestra-color__hex texto-blanco">09EBDD</strong>
+                  <code class="texto-blanco">--color-acento-hover;</code>
+                </div>
+                <p class="muestra-color__desc">Hover de los botones.</p>
+              </article>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- FILA 2: TEXTO, OPCION 1 / TEXTO, OPCION 2 / NEUTROS -->
+        <div class="sistema-paleta-fila">
+
+          <!-- GRUPO: TEXTO, OPCION 1 -->
+          <div class="grupo-color">
+            <h4 class="grupo-color__titulo">TEXTO, OPCIÓN 1</h4>
+            <div class="grupo-color__items">
+              <article class="muestra-color">
+                <div class="muestra-color__swatch swatch--texto-blanco">
+                  <strong class="muestra-color__hex texto-naranja">FFFFFF</strong>
+                  <code class="texto-naranja">--color-textoblanco;</code>
+                  <code class="texto-naranja">--color-fondo-cards;</code>
+                  <code class="texto-naranja">--color-fondo-form;</code>
+                </div>
+                <p class="muestra-color__desc">Texto para fondos oscuros, fondo de las cards de informacion para colaborar y del formulario.</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- GRUPO: TEXTO, OPCION 2 -->
+          <div class="grupo-color">
+            <h4 class="grupo-color__titulo">TEXTO, OPCIÓN 2</h4>
+            <div class="grupo-color__items">
+              <article class="muestra-color">
+                <div class="muestra-color__swatch swatch--texto-negro">
+                  <strong class="muestra-color__hex texto-naranja">000000</strong>
+                  <code class="texto-naranja">--color-textonegro;</code>
+                </div>
+                <p class="muestra-color__desc">Texto para fondos claros.</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- GRUPO: NEUTROS -->
+          <div class="grupo-color">
+            <h4 class="grupo-color__titulo">NEUTROS</h4>
+            <div class="grupo-color__items">
+              <article class="muestra-color">
+                <div class="muestra-color__swatch swatch--fondo-alternativo">
+                  <strong class="muestra-color__hex texto-naranja">FFF1D6</strong>
+                  <code class="texto-naranja">--color-fondo-alternativo;</code>
+                </div>
+                <p class="muestra-color__desc">Color de fondo alternativo para diferenciar secciones.</p>
+              </article>
+
+              <article class="muestra-color">
+                <div class="muestra-color__swatch swatch--bordes">
+                  <strong class="muestra-color__hex texto-naranja">FFD8AD</strong>
+                  <code class="texto-naranja">--color-bordes-card;</code>
+                </div>
+                <p class="muestra-color__desc">Color sutil para bordes de las cards.</p>
+              </article>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- TIPOGRAFÍA -->
+
+      <div class="sistema-subseccion">
+        <h3>Escala tipográfica</h3>
+        <p>
+          La jerarquía tipográfica organiza la información y facilita
+          la lectura. Poppins se utiliza en encabezados y Nunito en
+          textos de lectura continua.
+        </p>
+      </div>
+
+      <div class="sistema-lista-tokens">
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-display</code>
+            <span>72px · H1 / Hero</span>
+          </div>
+          <p class="ejemplo-display">Ellos nos necesitan</p>
+        </div>
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-titulo</code>
+            <span>48px · H2 / Secciones</span>
+          </div>
+          <p class="ejemplo-titulo">Nuestros valores</p>
+        </div>
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-subtitulo</code>
+            <span>32px · H3 / Subtítulos</span>
+          </div>
+          <p class="ejemplo-subtitulo">Comunidad</p>
+        </div>
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-titulocard</code>
+            <span>28px · Títulos de tarjetas</span>
+          </div>
+          <p class="ejemplo-card">Historias que transforman</p>
+        </div>
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-cta</code>
+            <span>28px · Botón principal</span>
+          </div>
+          <p class="ejemplo-cta">¡Adoptá!</p>
+        </div>
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-parrafo</code>
+            <span>20px · Cuerpo de texto</span>
+          </div>
+          <p class="ejemplo-parrafo">
+            Adoptar es mucho más que sumar una mascota: es regalarles
+            una vida llena de cuidado, respeto y segundas oportunidades.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ESPACIADOS -->
+
+      <div class="sistema-subseccion">
+        <h3>Escala de espaciados</h3>
+        <p>
+          Los valores establecen un ritmo visual constante entre
+          columnas, párrafos, componentes y secciones.
+        </p>
+      </div>
+
+      <div class="sistema-lista-tokens">
+
+        <div class="fila-espacio">
+          <div class="fila-token__meta">
+            <code>--espaciado-columnas</code>
+            <span>8px · Separación entre columnas</span>
+          </div>
+          <div class="barra-espacio barra-espacio--columnas"></div>
+        </div>
+
+        <div class="fila-espacio">
+          <div class="fila-token__meta">
+            <code>--espaciado-parrafos</code>
+            <span>16px · Separación entre textos</span>
+          </div>
+          <div class="barra-espacio barra-espacio--parrafos"></div>
+        </div>
+
+        <div class="fila-espacio">
+          <div class="fila-token__meta">
+            <code>--espaciado-paddingcomponentes</code>
+            <span>18px · Espaciado interno</span>
+          </div>
+          <div class="barra-espacio barra-espacio--padding"></div>
+        </div>
+
+        <div class="fila-espacio">
+          <div class="fila-token__meta">
+            <code>--espaciado-componentes</code>
+            <span>56px · Separación entre componentes</span>
+          </div>
+          <div class="barra-espacio barra-espacio--componentes"></div>
+        </div>
+
+        <div class="fila-espacio">
+          <div class="fila-token__meta">
+            <code>--espaciado-secciones</code>
+            <span>44px · Separación entre secciones</span>
+          </div>
+          <div class="barra-espacio barra-espacio--secciones"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 4. INVENTARIO DE COMPONENTES -->
+<!-- 4. INVENTARIO DE COMPONENTES -->
+
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-componentes">
+
+      <div class="sistema-bloque__cabecera">
+        <span class="sistema-numero">04 · ARQUITECTURA</span>
+        <h2 id="doc-componentes">Inventario de componentes</h2>
+        <p>
+          Componentes principales del sitio organizados según su nivel de
+          complejidad: átomos, moléculas y organismos reales extraídos de las
+          distintas secciones.
+        </p>
+      </div>
+
+      <!-- ÁTOMOS -->
+
+      <div class="sistema-inventario">
+        <div class="sistema-inventario__cabecera">
+          <h3>Átomos</h3>
+          <p>
+            Elementos mínimos e independientes (logo, botones, enlaces de navegación,
+            etiquetas e íconos) reutilizados en toda la interfaz.
+          </p>
+        </div>
+
+        <div class="sistema-muestrario-atomos">
+
+          <div class="sistema-muestra">
+            <a href="index.html" class="logo" aria-label="Logo Callejeritos Gonnet">
+              <img src="assets/Logo.png" alt="Logo Callejeritos Gonnet" class="logo__svg">
+            </a>
+            <code>.logo</code>
+          </div>
+
+          <div class="sistema-muestra">
+            <a href="adopciones.html" class="header_item">Adopciones</a>
+            <code>.header_item</code>
+          </div>
+
+          <div class="sistema-muestra">
+            <a href="como-ayudar.html#donar" class="btn-primario">¡Doná ahora!</a>
+            <code>.btn-primario</code>
+          </div>
+
+          <div class="sistema-muestra">
+            <a href="contacto.html" class="btn-secundario">Quiero participar</a>
+            <code>.btn-secundario</code>
+          </div>
+
+          <div class="sistema-muestra">
+            <span class="etiqueta-caracteristica">Mimosa</span>
+            <code>.etiqueta-caracteristica</code>
+          </div>
+
+          <div class="sistema-muestra">
+            <span class="etiqueta-edad">Adulto</span>
+            <code>.etiqueta-edad</code>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- MOLÉCULAS -->
+
+      <div class="sistema-inventario">
+        <div class="sistema-inventario__cabecera">
+          <h3>Moléculas</h3>
+          <p>
+            Combinaciones funcionales de átomos (campos de formulario y tarjetas
+            individuales) que cumplen una tarea concreta dentro de cada sección.
+          </p>
+        </div>
+
+        <div class="sistema-grilla-moleculas">
+
+          <div class="sistema-molecula">
+            <div class="campo-form">
+              <label for="demo-nombre" class="etiqueta-form">Nombre</label>
+              <input type="text" id="demo-nombre" placeholder="Tu nombre completo" disabled>
+            </div>
+            <code>.campo-form</code>
+          </div>
+
+      <div class="sistema-molecula">
+            <div class="contenedor-card sistema-card-acotada">
+              <a href="kity.html" class="card-animales">
+                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=500&q=80" alt="Kity en adopción" class="img-card">
+                <div class="card-animales__pie">
+                  <h2>Kity</h2>
+                </div>
+              </a>
+            </div>
+            <code>.card-animales</code>
+          </div>
+
+          <div class="sistema-molecula">
+            <div class="contenedor-card">
+              <article class="card-ayuda">
+                <span class="card-ayuda__icono" aria-hidden="true">
+                  <img src="assets/donaciones.png" alt="">
+                </span>
+                <div class="card-ayuda__contenido">
+                  <h3>Donaciones</h3>
+                  <p>Con tu aporte económico nos ayudás a cubrir gastos veterinarios, medicación y cuidados diarios.</p>
+                </div>
+              </article>
+            </div>
+            <code>.card-ayuda</code>
+          </div>
+
+          <div class="sistema-molecula">
+            <div class="contenedor-card">
+              <article class="card-evento">
+                <div class="card-evento__fecha">
+                  <span class="card-evento__dia">06</span>
+                  <span class="card-evento__mes">DIC</span>
+                </div>
+                <div class="card-evento__cuerpo">
+                  <span class="etiqueta-caracteristica">Evento Callejeritos</span>
+                  <h2>Feria Solidaria</h2>
+                  <p class="card-evento__lugar">Plaza de la Estación Gonnet · 14:00 hs</p>
+                </div>
+              </article>
+            </div>
+            <code>.card-evento</code>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ORGANISMOS -->
+
+      <div class="sistema-inventario">
+        <div class="sistema-inventario__cabecera">
+          <h3>Organismos</h3>
+          <p>
+            Estructuras completas formadas por moléculas y átomos que organizan
+            la navegación, la presentación y la interacción del sitio.
+          </p>
+        </div>
+
+        <div class="sistema-grilla-organismos">
+<div class="sistema-organismo">
+            <header class="header">
+              <div class="header__contenedor">
+                <a href="index.html" class="logo" aria-label="Inicio Callejeritos Gonnet">
+                  <img src="assets/Logo.png" alt="Logo Callejeritos Gonnet" class="logo__svg">
+                </a>
+
+                <nav class="barra-navegacion" aria-label="Ejemplo navegación principal">
+                  <ul class="barra-navegacion__lista">
+                    <li><a href="quienes-somos.html" class="header_item">¿Quiénes somos?</a></li>
+                    <li><a href="adopciones.html" class="header_item">Adopciones</a></li>
+                    <li><a href="como-ayudar.html" class="header_item">Cómo ayudar</a></li>
+                    <li><a href="agenda.html" class="header_item">Agenda</a></li>
+                    <li><a href="contacto.html" class="header_item">Contacto</a></li>
+                  </ul>
+                </nav>
+
+                <a href="como-ayudar.html#donar" class="btn-primario">¡Doná ahora!</a>
+              </div>
+            </header>
+            <div class="sistema-organismo__datos">
+              <strong>.header</strong>
+              <p>Encabezado global completo con logo, los cinco enlaces de navegación principal y el botón CTA de donación.</p>
+            </div>
+          </div>
+
+          <div class="sistema-organismo">
+            <div class="sistema-organismo__preview">
+              <div class="cards-pago">
+                <article class="card-pago">
+                  <div class="img-pago-mp">
+                    <img src="assets/mercadopago.png" alt="Mercado Pago">
+                  </div>
+                  <p>Alias solidario: <strong>callejeritos.gonnet</strong></p>
+                  <a href="contacto.html" class="btn-secundario">Informar transferencia</a>
+                </article>
+
+                <article class="card-pago">
+                  <div class="img-pago-pp">
+                    <img src="assets/paypal.png" alt="PayPal">
+                  </div>
+                  <p>Alias internacional: <strong>callejeritos.gonnet</strong></p>
+                  <a href="contacto.html" class="btn-secundario">Donar desde el exterior</a>
+                </article>
+              </div>
+            </div>
+            <div class="sistema-organismo__datos">
+              <strong>.cards-pago</strong>
+              <p>Organismo con ambas tarjetas de donación directa (Mercado Pago y PayPal), alias y botones secundarios.</p>
+            </div>
+          </div>
+
+     <div class="sistema-organismo">
+            <div class="sistema-organismo__preview">
+              <form class="form-contacto" action="#" method="post">
+                <h2>Escribinos tu consulta</h2>
+
+                <div class="campo-form">
+                  <label for="demo-form-nombre" class="etiqueta-form">Nombre</label>
+                  <input type="text" id="demo-form-nombre" name="nombre" placeholder="Tu nombre completo" disabled>
+                </div>
+
+                <div class="campo-form">
+                  <label for="demo-form-correo" class="etiqueta-form">Correo electrónico</label>
+                  <input type="email" id="demo-form-correo" name="correo" placeholder="ejemplo@gmail.com" disabled>
+                </div>
+
+                <div class="campo-form">
+                  <label for="demo-form-asunto" class="etiqueta-form">Asunto</label>
+                  <select id="demo-form-asunto" name="asunto" disabled>
+                    <option value="" selected>Seleccionar motivo</option>
+                    <option value="adopcion">Quiero adoptar</option>
+                    <option value="transito">Quiero ser hogar de tránsito</option>
+                    <option value="donacion">Donación de insumos / medicamentos</option>
+                    <option value="voluntariado">Quiero ser voluntario</option>
+                    <option value="agenda">Consulta sobre eventos / jornadas</option>
+                  </select>
+                </div>
+
+                <div class="campo-form">
+                  <label for="demo-form-mensaje" class="etiqueta-form">Tu mensaje</label>
+                  <textarea id="demo-form-mensaje" name="mensaje" rows="4" placeholder="Escribí tu mensaje acá..." disabled></textarea>
+                </div>
+
+                <button type="button" class="btn-secundario"><strong>Enviar</strong></button>
+              </form>
+            </div>
+            <div class="sistema-organismo__datos">
+              <strong>.form-contacto</strong>
+              <p>Formulario completo compuesto por título, cuatro campos de entrada con sus etiquetas y botón secundario de envío.</p>
+            </div>
+          </div>
+
+       <div class="sistema-organismo">
+            <footer class="footer">
+              <div class="footer__contenedor">
+                <nav class="footer__enlaces" aria-label="Ejemplo enlaces del pie de página">
+                  <ul>
+                    <li><a href="contacto.html">Contactanos</a></li>
+                    <li><a href="como-ayudar.html">Colaborar</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="agenda.html">Agenda Gonnet</a></li>
+                    <li><a href="sistema.html">Sistema de Diseño</a></li>
+                  </ul>
+                </nav>
+
+                   <div class="footer__redes">
+          <p>¡Seguinos en redes sociales!</p>
+        <div class="footer__iconos">
+          <a href="https://www.instagram.com/callejeritos.gonnet/" target="_blank" rel="noopener" class="icono-redes" aria-label="Instagram">
+            <img src="assets/Instagram.png" alt="Instagram"></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Facebook">
+            <img src="assets/Facebook.png" alt="Facebook"></a>
+        </div>
+    
+                </div>
+              </div>
+            </footer>
+            <div class="sistema-organismo__datos">
+              <strong>.footer</strong>
+              <p>Pie de página global completo con los cinco enlaces institucionales y el bloque de redes sociales.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 5. DECISIONES TÉCNICAS -->
+
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-tecnico">
+
+      <div class="sistema-bloque__cabecera">
+        <span class="sistema-numero">05 · IMPLEMENTACIÓN</span>
+        <h2 id="doc-tecnico">Decisiones técnicas</h2>
+      </div>
+
+      <div class="sistema-texto sistema-decisiones">
+
+        <h3>Grilla principal</h3>
+        <p>
+          La estructura general del sitio utiliza CSS Grid con una
+          organización de 4 columnas para mobile, 8 para tablet y
+          12 para desktop. Esta estructura permite distribuir los
+          contenidos de manera flexible según el espacio disponible.
+          Las dimensiones de referencia utilizadas para documentar
+          cada formato son 412 × 917 px, 834 × 1194 px y 1512 × 982 px.
+        </p>
+
+        <h3>Container Queries</h3>
+        <p>
+          Se incorporaron Container Queries en componentes como
+          <code>.card-valor</code> y <code>.card-ayuda</code>, para
+          modificar su disposición según el ancho de su propio
+          contenedor y no solamente según el tamaño de la pantalla.
+          De esta manera, pueden pasar de una organización vertical
+          a una horizontal cuando cuentan con espacio suficiente.
+          También se utilizan consultas de contenedor en tarjetas
+          de animales, historias y eventos.
+        </p>
+
+        <h3>Desafío de implementación</h3>
+        <p>
+          Uno de los principales desafíos técnicos del sistema es
+          mantener una misma identidad visual y una distribución
+          clara de los contenidos en diferentes tamaños de pantalla.
+          Para resolverlo, se trabajó con variables reutilizables,
+          componentes organizados por niveles y reglas responsivas,
+          evitando repetir estilos y permitiendo adaptar cada
+          elemento al espacio disponible.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- GRILLA RESPONSIVA -->
+
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-grid">
+
+      <div class="sistema-bloque__cabecera">
+        <span class="sistema-numero">06 · ESTRUCTURA</span>
+        <h2 id="doc-grid">Grilla responsive</h2>
+        <p>
+          La estructura macro utiliza CSS Grid y adapta la cantidad
+          de columnas según el formato de pantalla.
+        </p>
+      </div>
+
+      <div class="sistema-grilla-formatos">
+
+        <article class="sistema-formato">
+          <div class="sistema-formato__datos">
+            <h3>Mobile</h3>
+            <strong>4 columnas</strong>
+            <span>412 × 917 px</span>
+          </div>
+          <div class="demo-grilla-visual demo-grilla-mobile">
+            <span>1</span><span>2</span><span>3</span><span>4</span>
+          </div>
+        </article>
+
+        <article class="sistema-formato">
+          <div class="sistema-formato__datos">
+            <h3>Tablet</h3>
+            <strong>8 columnas</strong>
+            <span>834 × 1194 px</span>
+          </div>
+          <div class="demo-grilla-visual demo-grilla-tablet">
+            <span>1</span><span>2</span><span>3</span><span>4</span>
+            <span>5</span><span>6</span><span>7</span><span>8</span>
+          </div>
+        </article>
+
+        <article class="sistema-formato">
+          <div class="sistema-formato__datos">
+            <h3>Desktop</h3>
+            <strong>12 columnas</strong>
+            <span>1512 × 982 px</span>
+          </div>
+          <div class="demo-grilla-visual demo-grilla-desktop">
+            <span>1</span><span>2</span><span>3</span><span>4</span>
+            <span>5</span><span>6</span><span>7</span><span>8</span>
+            <span>9</span><span>10</span><span>11</span><span>12</span>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+
+      <nav class="footer__enlaces" aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="contacto.html">Contactanos</a></li>
+          <li><a href="como-ayudar.html">Colaborar</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="agenda.html">Agenda Gonnet</a></li>
+          <li><a href="sistema.html">Sistema de Diseño</a></li>
+        </ul>
+      </nav>
+
+       <div class="footer__redes">
+          <p>¡Seguinos en redes sociales!</p>
+        <div class="footer__iconos">
+          <a href="https://www.instagram.com/callejeritos.gonnet/" target="_blank" rel="noopener" class="icono-redes" aria-label="Instagram">
+  <img src="assets/Instagram.png" alt="Instagram">
+</a>
+
+<a href="https://facebook.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Facebook">
+  <img src="assets/Facebook.png" alt="Facebook">
+</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
